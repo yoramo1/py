@@ -67,7 +67,7 @@ def get_esi_vendor(path):
 	#print('>> ',path)
 	tree = ET()
 	tree.parse(path)
-	vNode = tree.find('Vendor')
+	vNode = tree.find('Vendor') 
 	if vNode!=None:
 		name_node = vNode.find('Name')
 		if name_node != None:
@@ -105,7 +105,15 @@ def get_devices_desc(path):
 def get_xml_content(tag):
 	return xml.etree.ElementTree.tostring(tag) 
 	
-
+def get_int(str):
+	ret = None
+	if str.startswith('#x'):
+		str = str.replace('#x','0x')
+		ret = int(str,16)
+		return ret
+	else:
+		ret = int(str,10)
+	return ret
 
 if (__name__=='__main__'):
 	Main()
