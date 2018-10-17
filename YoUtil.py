@@ -114,6 +114,9 @@ def get_int(str):
 	else:
 		ret = int(str,10)
 	return ret
+	
+def debug_print(text,lst):
+	print('>>',text,lst)
 
 if (__name__=='__main__'):
 	Main()

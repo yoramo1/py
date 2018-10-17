@@ -13,6 +13,7 @@ def Main():
 	#YoUtil.print_list(sys.argv,1)
 	esi = EsiUtil()
 	numofParams = len(sys.argv)
+	print('>> numofParams=:',numofParams)
 	if numofParams > 1:
 		cmd = sys.argv[1].lower()
 		command_options = {
@@ -26,7 +27,17 @@ def Main():
 			print_usage(cmd)
 	else:
 		print_usage()
-			
+
+def print_usage(cmd=None):
+	if cmd!= None:
+		print('None valid Command option: ',cmd)
+	print('PY ECatEsiUtil.py <cmd> <param1> <param2> <param3>')
+	print('	cmd - esi_folders ')
+	print('	cmd - find <what> param1 param2 param3')
+	print('	      what - esi - list of ESI files')
+	print('	      what - vendor <vendorID> list of ESI files of a vendor')
+	print('	      what - device_esi <vendorID> <productCode> <revisionNumber>')
+		
 def cmd_esi_folder(esi):
 	YoUtil.print_list(esi.get_ESI_folders(),1)
 	
@@ -38,16 +49,18 @@ def cmd_find(esi):
 		vendor_id = YoUtil.get_int(sys.argv[3])
 		files = esi.get_ESI_files_by_vendor(vendor_id)
 		YoUtil.print_list(files,1)
+	elif sys.argv[2] == 'device_esi':
+		vendor_id = YoUtil.get_int(sys.argv[3])
+		productCode = YoUtil.get_int(sys.argv[4])
+		revisionNumber = None
+		if len(sys.argv) > 5:
+			revisionNumber = YoUtil.get_int(sys.argv[5])
+		files = esi.get_devices(vendor_id,productCode,revisionNumber)
+		YoUtil.print_list(files,1)
+	else:
+		print_usage('find')
 		
 
-def print_usage(cmd=None):
-	if cmd!= None:
-		print('None valid Command option: ',cmd)
-	print('PY ECatEsiUtil.py <cmd> <param1> <param2> <param3>')
-	print('	cmd - esi_folders ')
-	print('	cmd - find <what> param1 param2 param3')
-	print('	      what - esi - list of ESI files')
-	print('	      what - vendor <vendorID> list of ESI files of a vendor')
 	
 class EsiUtil:
 	def __init__(self):
@@ -83,6 +96,24 @@ class EsiUtil:
 		userESIPath= YoUtil.get_elmo_user_ESI_path()
 		ret.append(userESIPath)
 		ret.append('C:\Dev\eas\View\ElmoMotionControl.View.Main\EtherCATSlaveLib')
+		return ret
+		
+	def get_devices(self, vendor_id,productCode,revisionNumber):
+		ret = list()
+		files = self.get_ESI_files_by_vendor(vendor_id)
+		YoUtil.debug_print('num of files=',len(files))
+		for file_path in files:
+			xml_esi = self.load_esi(file_path)
+			if xml_esi!= None:
+				xml_list_device = xml_esi.findall('Descriptions/Devices/Device')
+				YoUtil.debug_print('num of devices=',len(xml_list_device))
+				for xml_device in xml_list_device:
+					xml_type = xml_device.find('Type')
+					if xml_type != None:
+						pc = YoUtil.get_int(xml_type.attrib['ProductCode'])
+						YoUtil.debug_print('ProductCode=',pc)
+						if pc == productCode:
+							ret.append(file_path)
 		return ret
 		
 	def load_esi(self,esi_path):
