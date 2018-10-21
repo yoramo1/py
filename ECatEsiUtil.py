@@ -1,6 +1,8 @@
 import sys
 import os
 from xml.etree.ElementTree import ElementTree as ET
+import sqlite3
+from sqlite3 import Error
 import YoUtil
 
 
@@ -33,6 +35,7 @@ def print_usage(cmd=None):
 		print('None valid Command option: ',cmd)
 	print('PY ECatEsiUtil.py <cmd> <param1> <param2> <param3>')
 	print('	cmd - esi_folders ')
+	print('	cmd - createDB')
 	print('	cmd - find <what> param1 param2 param3')
 	print('	      what - esi - list of ESI files')
 	print('	      what - vendor <vendorID> list of ESI files of a vendor')
@@ -41,15 +44,21 @@ def print_usage(cmd=None):
 def cmd_esi_folder(esi):
 	YoUtil.print_list(esi.get_ESI_folders(),1)
 	
-def cmd_find(esi):
-	if sys.argv[2] == 'esi':
+def cmd_find(esi):			
+	cmd = sys.argv[2].lower()
+	if cmd == 'esi':
 		files = esi.get_ESI_files()
 		YoUtil.print_list(files,1)
-	elif sys.argv[2] == 'vendor':
+	elif cmd == 'vendor':
 		vendor_id = YoUtil.get_int(sys.argv[3])
 		files = esi.get_ESI_files_by_vendor(vendor_id)
 		YoUtil.print_list(files,1)
-	elif sys.argv[2] == 'device_esi':
+	elif cmd == 'createdb':
+		if esi.create_esi_db() == True:
+			print('ESI DB created successfully')
+		else:
+			print('failed to create ESI DB ')
+	elif cmd == 'device_esi':
 		vendor_id = YoUtil.get_int(sys.argv[3])
 		productCode = YoUtil.get_int(sys.argv[4])
 		revisionNumber = None
@@ -97,6 +106,23 @@ class EsiUtil:
 		ret.append(userESIPath)
 		ret.append('C:\Dev\eas\View\ElmoMotionControl.View.Main\EtherCATSlaveLib')
 		return ret
+		
+	def create_esi_db(self):
+		try:
+			self.con = sqlite3.connect('esi.db')
+			cur = self.con.cursor()
+			#YoUtil.debug_print('SQLite version: ',cur.fetchone())	
+			with self.con:
+				cur.execute("CREATE TABLE IF NOT EXISTS Vendors(VendorId INT, Name TEXT)")
+				cur.execute("CREATE TABLE IF NOT EXISTS Files(VendorId INT, Path TEXT)")
+				cur.execute("CREATE TABLE IF NOT EXISTS Devices(VendorId INT, productCode INT, revisionNumber INT, Name TEXT)")
+			return True
+		except sqlite3.Error as e:
+			print(e)
+			return False
+		finally:
+			if self.con:
+				self.con.close()
 		
 	def get_devices(self, vendor_id,productCode,revisionNumber):
 		ret = list()
