@@ -54,7 +54,7 @@ def cmd_find(esi):
 		files = esi.get_ESI_files_by_vendor(vendor_id)
 		YoUtil.print_list(files,1)
 	elif cmd == 'createdb':
-		if esi.create_esi_db() == True:
+		if esi.create_esi_db('esi.db') == True:
 			print('ESI DB created successfully')
 		else:
 			print('failed to create ESI DB ')
@@ -107,15 +107,24 @@ class EsiUtil:
 		ret.append('C:\Dev\eas\View\ElmoMotionControl.View.Main\EtherCATSlaveLib')
 		return ret
 		
-	def create_esi_db(self):
+	def create_esi_db(self, db_name):
 		try:
-			self.con = sqlite3.connect('esi.db')
+			if os.path.exists(db_name):
+				os.remove(db_name)
+				YoUtil.debug_print('DB file deleted:',db_name)	
+			self.con = sqlite3.connect(db_name)
 			cur = self.con.cursor()
-			#YoUtil.debug_print('SQLite version: ',cur.fetchone())	
+			YoUtil.debug_print('SQLite version: ',cur.fetchone())	
 			with self.con:
-				cur.execute("CREATE TABLE IF NOT EXISTS Vendors(VendorId INT, Name TEXT)")
-				cur.execute("CREATE TABLE IF NOT EXISTS Files(VendorId INT, Path TEXT)")
+				cur.execute("CREATE TABLE IF NOT EXISTS Vendors(VendorId INT, Name TEXT, Path TEXT)")
 				cur.execute("CREATE TABLE IF NOT EXISTS Devices(VendorId INT, productCode INT, revisionNumber INT, Name TEXT)")
+			
+			files = self.get_ESI_files()
+			for esi_path in files:
+				vendor_id,vendor_name = self.get_ESI_info(esi_path)
+				if vendor_id!= 0:
+					with self.con:
+						cur.execute("INSERT INTO Vendors (VendorId,Name,Path) VALUES(?,?,?)",(vendor_id,vendor_name,esi_path))
 			return True
 		except sqlite3.Error as e:
 			print(e)
@@ -123,6 +132,34 @@ class EsiUtil:
 		finally:
 			if self.con:
 				self.con.close()
+		
+	def get_ESI_info(self,esi_path):
+		vendor_id = 0
+		vendor_name  = None
+		xml_esi = self.load_esi(esi_path)
+		if xml_esi!= None:
+			xml_vendor = xml_esi.find('Vendor')
+			if xml_vendor!= None:
+				xml_id = xml_vendor.find('Id')
+				if xml_id != None:
+					vendor_id = YoUtil.get_int(xml_id.text)
+				xml_name = xml_vendor.find('Name')
+				if xml_name != None:
+					vendor_name = xml_name.text
+		
+			#devices
+			#xml_list_device = xml_esi.findall('Descriptions/Devices/Device')
+			#YoUtil.debug_print('num of devices=',len(xml_list_device))
+			#for xml_device in xml_list_device:
+			#	xml_type = xml_device.find('Type')
+			#	if xml_type != None:
+			#		pc = YoUtil.get_int(xml_type.attrib['ProductCode'])
+			#		YoUtil.debug_print('ProductCode=',pc)
+			#		if pc == productCode:
+			#			ret.append(file_path)
+						
+		return vendor_id,vendor_name
+	
 		
 	def get_devices(self, vendor_id,productCode,revisionNumber):
 		ret = list()
