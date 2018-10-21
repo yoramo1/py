@@ -117,7 +117,7 @@ class EsiUtil:
 			YoUtil.debug_print('SQLite version: ',cur.fetchone())	
 			with self.con:
 				cur.execute("CREATE TABLE IF NOT EXISTS Vendors(VendorId INT, Name TEXT, Path TEXT)")
-				cur.execute("CREATE TABLE IF NOT EXISTS Devices(VendorId INT, productCode INT, revisionNumber INT, Name TEXT)")
+				cur.execute("CREATE TABLE IF NOT EXISTS Devices(VendorId INT, productCode INT, revisionNumber INT, Name TEXT, Xml TEXT)")
 			
 			files = self.get_ESI_files()
 			for esi_path in files:
@@ -125,6 +125,10 @@ class EsiUtil:
 				if vendor_id!= 0:
 					with self.con:
 						cur.execute("INSERT INTO Vendors (VendorId,Name,Path) VALUES(?,?,?)",(vendor_id,vendor_name,esi_path))
+					device_list = self.get_ESI_devices()
+					for device in device_list:
+						with self.con:
+							cur.execute("INSERT INTO Devices (VendorId,productCode,revisionNumber,Name) VALUES(?,?,?,?)",(vendor_id,device[0],device[1],device[2]))
 			return True
 		except sqlite3.Error as e:
 			print(e)
@@ -136,9 +140,10 @@ class EsiUtil:
 	def get_ESI_info(self,esi_path):
 		vendor_id = 0
 		vendor_name  = None
-		xml_esi = self.load_esi(esi_path)
-		if xml_esi!= None:
-			xml_vendor = xml_esi.find('Vendor')
+		self.esi_path = esi_path
+		self.xml_esi = self.load_esi(esi_path)
+		if self.xml_esi!= None:
+			xml_vendor = self.xml_esi.find('Vendor')
 			if xml_vendor!= None:
 				xml_id = xml_vendor.find('Id')
 				if xml_id != None:
@@ -146,20 +151,30 @@ class EsiUtil:
 				xml_name = xml_vendor.find('Name')
 				if xml_name != None:
 					vendor_name = xml_name.text
-		
-			#devices
-			#xml_list_device = xml_esi.findall('Descriptions/Devices/Device')
-			#YoUtil.debug_print('num of devices=',len(xml_list_device))
-			#for xml_device in xml_list_device:
-			#	xml_type = xml_device.find('Type')
-			#	if xml_type != None:
-			#		pc = YoUtil.get_int(xml_type.attrib['ProductCode'])
-			#		YoUtil.debug_print('ProductCode=',pc)
-			#		if pc == productCode:
-			#			ret.append(file_path)
 						
 		return vendor_id,vendor_name
 	
+	def get_ESI_devices(self):
+		ret = list()
+		#devices
+		if self.xml_esi!= None:
+			YoUtil.debug_print('read devices of esi=',self.esi_path)
+			xml_list_device = self.xml_esi.findall('Descriptions/Devices/Device')
+			YoUtil.debug_print('num of devices in esi=',len(xml_list_device))
+			for xml_device in xml_list_device:
+				pc = None
+				rev=None
+				name=None
+				xml_type = xml_device.find('Type')
+				if xml_type != None:
+					if 'ProductCode' in xml_type.attrib.keys():
+						pc = YoUtil.get_int(xml_type.attrib['ProductCode'])
+					if 'RevisionNo' in xml_type.attrib.keys():
+						rev = YoUtil.get_int(xml_type.attrib['RevisionNo'])
+					YoUtil.debug_print('ProductCode=',pc)
+				if pc != None:
+					ret.append((pc,rev,name))
+		return ret
 		
 	def get_devices(self, vendor_id,productCode,revisionNumber):
 		ret = list()
