@@ -78,17 +78,19 @@ class EsiUtil:
 	def get_ESI_files(self):
 		esi_folders = self.get_ESI_folders()
 		ret = list()
-		for folder in esi_folders:
+		for pair in esi_folders:
+			folder = pair[1]
 			files = YoUtil.get_list_of_files(folder,'.xml')
 			for file in files:
 				full_path = os.path.join(folder,file)
-				ret.append(full_path)
+				ret.append((pair[0],full_path))
 		return ret
 
 	def get_ESI_files_by_vendor(self, vendor_id):
 		files = self.get_ESI_files()
 		ret = list()
-		for file_path in files:
+		for pair in files:
+			file_path = pair[1]
 			xml_esi = self.load_esi(file_path)
 			if xml_esi!= None:
 				xml_vendor = xml_esi.find('Vendor')
@@ -103,8 +105,8 @@ class EsiUtil:
 	def get_ESI_folders(self):
 		ret = list()
 		userESIPath= YoUtil.get_elmo_user_ESI_path()
-		ret.append(userESIPath)
-		ret.append('C:\Dev\eas\View\ElmoMotionControl.View.Main\EtherCATSlaveLib')
+		ret.append(('ElmoUserESI',userESIPath))
+		ret.append(('EASESI','C:\Dev\eas\View\ElmoMotionControl.View.Main\EtherCATSlaveLib'))
 		return ret
 		
 	def create_esi_db(self, db_name):
@@ -116,22 +118,23 @@ class EsiUtil:
 			cur = self.con.cursor()
 			YoUtil.debug_print('SQLite version: ',cur.fetchone())	
 			with self.con:
-				cur.execute("CREATE TABLE IF NOT EXISTS Vendors(VendorId INT, Name TEXT, Path TEXT)")
+				cur.execute("CREATE TABLE IF NOT EXISTS Vendors(VendorId INT, Name TEXT, Path TEXT, App TEXT)")
 				cur.execute("CREATE TABLE IF NOT EXISTS Devices(VendorId INT, productCode INT, revisionNumber INT, Name TEXT, Xml TEXT)")
 			
-			files = self.get_ESI_files()
-			for esi_path in files:
+			files_pair = self.get_ESI_files()
+			for pair in files_pair:
+				esi_path = pair[1]
 				vendor_id,vendor_name = self.get_ESI_info(esi_path)
 				if vendor_id!= 0:
 					with self.con:
-						cur.execute("INSERT INTO Vendors (VendorId,Name,Path) VALUES(?,?,?)",(vendor_id,vendor_name,esi_path))
+						cur.execute("INSERT INTO Vendors (VendorId,Name,Path,App) VALUES(?,?,?,?)",(vendor_id,vendor_name,esi_path,pair[0]))
 					device_list = self.get_ESI_devices()
 					for device in device_list:
 						with self.con:
 							cur.execute("INSERT INTO Devices (VendorId,productCode,revisionNumber,Name) VALUES(?,?,?,?)",(vendor_id,device[0],device[1],device[2]))
 			return True
 		except sqlite3.Error as e:
-			print(e)
+			print('DB Error: ',e)
 			return False
 		finally:
 			if self.con:
@@ -167,11 +170,16 @@ class EsiUtil:
 				name=None
 				xml_type = xml_device.find('Type')
 				if xml_type != None:
+					msg1 = ''
 					if 'ProductCode' in xml_type.attrib.keys():
 						pc = YoUtil.get_int(xml_type.attrib['ProductCode'])
+						msg1 = msg1+'ProductCode='+hex(pc)
 					if 'RevisionNo' in xml_type.attrib.keys():
 						rev = YoUtil.get_int(xml_type.attrib['RevisionNo'])
-					YoUtil.debug_print('ProductCode=',pc)
+						msg1= msg1+' RevisionNo:'+hex(rev)
+					
+					if len(msg1)>0:
+						YoUtil.debug_print(msg1,'')
 				if pc != None:
 					ret.append((pc,rev,name))
 		return ret
