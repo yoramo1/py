@@ -1,0 +1,5030 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--Elmo Application Studio v.2.6.0.7 licensed to Elmo-->
+<!--Copyright (c) 2010-2018 Elmo. All rights reserved.-->
+<EtherCATConfig>
+	<ResID>2845</ResID>
+	<ElmoSpecialResources>
+		<ElmoPI TotalIN="73" TotalOut="16">
+			<slave ID="0" Nodes="1">
+				<Inputs Size="1">
+					<Variable Alias="I0x6000.1" VarType="4" BitSize="16" BitOffs="0" Index="24576" SubIndex="1" VarOffset="0" DisplayName="ID" NodeNum="0" />
+				</Inputs>
+			</slave>
+			<slave ID="1" Nodes="1">
+				<Inputs Size="18">
+					<Variable Alias="I0x6000.1" VarType="0" BitSize="1" BitOffs="16" Index="24576" SubIndex="1" VarOffset="0" DisplayName="Status__Underrange" NodeNum="0" />
+					<Variable Alias="I0x6000.2" VarType="0" BitSize="1" BitOffs="17" Index="24576" SubIndex="2" VarOffset="1" DisplayName="Status__Overrange" NodeNum="0" />
+					<Variable Alias="I0x6000.3" VarType="11" BitSize="2" BitOffs="18" Index="24576" SubIndex="3" VarOffset="2" DisplayName="Status__Limit 1" NodeNum="0" />
+					<Variable Alias="I0x6000.5" VarType="11" BitSize="2" BitOffs="20" Index="24576" SubIndex="5" VarOffset="3" DisplayName="Status__Limit 2" NodeNum="0" />
+					<Variable Alias="I0x6000.7" VarType="0" BitSize="1" BitOffs="22" Index="24576" SubIndex="7" VarOffset="4" DisplayName="Status__Error" NodeNum="0" />
+					<Variable Alias="I0x6000.14" VarType="0" BitSize="1" BitOffs="29" Index="24576" SubIndex="14" VarOffset="5" DisplayName="Status__Sync error" NodeNum="0" />
+					<Variable Alias="I0x6000.15" VarType="0" BitSize="1" BitOffs="30" Index="24576" SubIndex="15" VarOffset="6" DisplayName="Status__TxPDO State" NodeNum="0" />
+					<Variable Alias="I0x6000.16" VarType="0" BitSize="1" BitOffs="31" Index="24576" SubIndex="16" VarOffset="7" DisplayName="Status__TxPDO Toggle" NodeNum="0" />
+					<Variable Alias="I0x6000.17" VarType="3" BitSize="16" BitOffs="32" Index="24576" SubIndex="17" VarOffset="8" DisplayName="Value" NodeNum="0" />
+					<Variable Alias="I0x6010.1" VarType="0" BitSize="1" BitOffs="48" Index="24592" SubIndex="1" VarOffset="9" DisplayName="Status__Underrange" NodeNum="0" />
+					<Variable Alias="I0x6010.2" VarType="0" BitSize="1" BitOffs="49" Index="24592" SubIndex="2" VarOffset="10" DisplayName="Status__Overrange" NodeNum="0" />
+					<Variable Alias="I0x6010.3" VarType="11" BitSize="2" BitOffs="50" Index="24592" SubIndex="3" VarOffset="11" DisplayName="Status__Limit 1" NodeNum="0" />
+					<Variable Alias="I0x6010.5" VarType="11" BitSize="2" BitOffs="52" Index="24592" SubIndex="5" VarOffset="12" DisplayName="Status__Limit 2" NodeNum="0" />
+					<Variable Alias="I0x6010.7" VarType="0" BitSize="1" BitOffs="54" Index="24592" SubIndex="7" VarOffset="13" DisplayName="Status__Error" NodeNum="0" />
+					<Variable Alias="I0x6010.14" VarType="0" BitSize="1" BitOffs="61" Index="24592" SubIndex="14" VarOffset="14" DisplayName="Status__Sync error" NodeNum="0" />
+					<Variable Alias="I0x6010.15" VarType="0" BitSize="1" BitOffs="62" Index="24592" SubIndex="15" VarOffset="15" DisplayName="Status__TxPDO State" NodeNum="0" />
+					<Variable Alias="I0x6010.16" VarType="0" BitSize="1" BitOffs="63" Index="24592" SubIndex="16" VarOffset="16" DisplayName="Status__TxPDO Toggle" NodeNum="0" />
+					<Variable Alias="I0x6010.17" VarType="3" BitSize="16" BitOffs="64" Index="24592" SubIndex="17" VarOffset="17" DisplayName="Value" NodeNum="0" />
+				</Inputs>
+			</slave>
+			<slave ID="2" Nodes="1">
+				<Inputs Size="6">
+					<Variable Alias="I0xF101.13" VarType="0" BitSize="1" BitOffs="92" Index="61697" SubIndex="13" VarOffset="0" DisplayName="Device Diag" NodeNum="0" />
+					<Variable Alias="I0xF101.16" VarType="0" BitSize="1" BitOffs="95" Index="61697" SubIndex="16" VarOffset="1" DisplayName="Device State" NodeNum="0" />
+					<Variable Alias="I0xF100.1" VarType="2" BitSize="8" BitOffs="96" Index="61696" SubIndex="1" VarOffset="2" DisplayName="State Ch1" NodeNum="0" />
+					<Variable Alias="I0xF100.2" VarType="2" BitSize="8" BitOffs="104" Index="61696" SubIndex="2" VarOffset="3" DisplayName="State Ch2" NodeNum="0" />
+					<Variable Alias="I0xF100.3" VarType="2" BitSize="8" BitOffs="112" Index="61696" SubIndex="3" VarOffset="4" DisplayName="State Ch3" NodeNum="0" />
+					<Variable Alias="I0xF100.4" VarType="2" BitSize="8" BitOffs="120" Index="61696" SubIndex="4" VarOffset="5" DisplayName="State Ch4" NodeNum="0" />
+				</Inputs>
+			</slave>
+			<slave ID="3" Nodes="1">
+				<Inputs Size="24">
+					<Variable Alias="I0x6000.1" VarType="0" BitSize="1" BitOffs="128" Index="24576" SubIndex="1" VarOffset="0" DisplayName="Status__Sel. Ack/End counter" NodeNum="0" />
+					<Variable Alias="I0x6000.2" VarType="0" BitSize="1" BitOffs="129" Index="24576" SubIndex="2" VarOffset="1" DisplayName="Status__Ramp active" NodeNum="0" />
+					<Variable Alias="I0x6000.7" VarType="0" BitSize="1" BitOffs="134" Index="24576" SubIndex="7" VarOffset="2" DisplayName="Status__Error" NodeNum="0" />
+					<Variable Alias="I0x6000.14" VarType="0" BitSize="1" BitOffs="141" Index="24576" SubIndex="14" VarOffset="3" DisplayName="Status__Sync error" NodeNum="0" />
+					<Variable Alias="I0x6000.16" VarType="0" BitSize="1" BitOffs="143" Index="24576" SubIndex="16" VarOffset="4" DisplayName="Status__TxPDO Toggle" NodeNum="0" />
+					<Variable Alias="I0x6010.1" VarType="0" BitSize="1" BitOffs="144" Index="24592" SubIndex="1" VarOffset="5" DisplayName="Status__Sel. Ack/End counter" NodeNum="0" />
+					<Variable Alias="I0x6010.2" VarType="0" BitSize="1" BitOffs="145" Index="24592" SubIndex="2" VarOffset="6" DisplayName="Status__Ramp active" NodeNum="0" />
+					<Variable Alias="I0x6010.7" VarType="0" BitSize="1" BitOffs="150" Index="24592" SubIndex="7" VarOffset="7" DisplayName="Status__Error" NodeNum="0" />
+					<Variable Alias="I0x6010.14" VarType="0" BitSize="1" BitOffs="157" Index="24592" SubIndex="14" VarOffset="8" DisplayName="Status__Sync error" NodeNum="0" />
+					<Variable Alias="I0x6010.16" VarType="0" BitSize="1" BitOffs="159" Index="24592" SubIndex="16" VarOffset="9" DisplayName="Status__TxPDO Toggle" NodeNum="0" />
+					<Variable Alias="I0x6020.3" VarType="0" BitSize="1" BitOffs="162" Index="24608" SubIndex="3" VarOffset="10" DisplayName="Status__Set counter done" NodeNum="0" />
+					<Variable Alias="I0x6020.4" VarType="0" BitSize="1" BitOffs="163" Index="24608" SubIndex="4" VarOffset="11" DisplayName="Status__Counter underflow" NodeNum="0" />
+					<Variable Alias="I0x6020.5" VarType="0" BitSize="1" BitOffs="164" Index="24608" SubIndex="5" VarOffset="12" DisplayName="Status__Counter overflow" NodeNum="0" />
+					<Variable Alias="I0x6020.14" VarType="0" BitSize="1" BitOffs="173" Index="24608" SubIndex="14" VarOffset="13" DisplayName="Status__Sync error" NodeNum="0" />
+					<Variable Alias="I0x6020.15" VarType="0" BitSize="1" BitOffs="174" Index="24608" SubIndex="15" VarOffset="14" DisplayName="Status__TxPDO State" NodeNum="0" />
+					<Variable Alias="I0x6020.16" VarType="0" BitSize="1" BitOffs="175" Index="24608" SubIndex="16" VarOffset="15" DisplayName="Status__TxPDO Toggle" NodeNum="0" />
+					<Variable Alias="I0x6020.17" VarType="6" BitSize="32" BitOffs="176" Index="24608" SubIndex="17" VarOffset="16" DisplayName="Counter value" NodeNum="0" />
+					<Variable Alias="I0x6030.3" VarType="0" BitSize="1" BitOffs="210" Index="24624" SubIndex="3" VarOffset="17" DisplayName="Status__Set counter done" NodeNum="0" />
+					<Variable Alias="I0x6030.4" VarType="0" BitSize="1" BitOffs="211" Index="24624" SubIndex="4" VarOffset="18" DisplayName="Status__Counter underflow" NodeNum="0" />
+					<Variable Alias="I0x6030.5" VarType="0" BitSize="1" BitOffs="212" Index="24624" SubIndex="5" VarOffset="19" DisplayName="Status__Counter overflow" NodeNum="0" />
+					<Variable Alias="I0x6030.14" VarType="0" BitSize="1" BitOffs="221" Index="24624" SubIndex="14" VarOffset="20" DisplayName="Status__Sync error" NodeNum="0" />
+					<Variable Alias="I0x6030.15" VarType="0" BitSize="1" BitOffs="222" Index="24624" SubIndex="15" VarOffset="21" DisplayName="Status__TxPDO State" NodeNum="0" />
+					<Variable Alias="I0x6030.16" VarType="0" BitSize="1" BitOffs="223" Index="24624" SubIndex="16" VarOffset="22" DisplayName="Status__TxPDO Toggle" NodeNum="0" />
+					<Variable Alias="I0x6030.17" VarType="6" BitSize="32" BitOffs="224" Index="24624" SubIndex="17" VarOffset="23" DisplayName="Counter value" NodeNum="0" />
+				</Inputs>
+				<Outputs Size="16">
+					<Variable Alias="O0x7000.1" VarType="0" BitSize="1" BitOffs="0" Index="28672" SubIndex="1" VarOffset="0" DisplayName="Control__Frequency select" NodeNum="0" />
+					<Variable Alias="O0x7000.2" VarType="0" BitSize="1" BitOffs="1" Index="28672" SubIndex="2" VarOffset="1" DisplayName="Control__Disable ramp" NodeNum="0" />
+					<Variable Alias="O0x7000.3" VarType="0" BitSize="1" BitOffs="2" Index="28672" SubIndex="3" VarOffset="2" DisplayName="Control__Go counter" NodeNum="0" />
+					<Variable Alias="O0x7000.17" VarType="4" BitSize="16" BitOffs="16" Index="28672" SubIndex="17" VarOffset="3" DisplayName="Frequency value" NodeNum="0" />
+					<Variable Alias="O0x7000.18" VarType="6" BitSize="32" BitOffs="32" Index="28672" SubIndex="18" VarOffset="4" DisplayName="Target counter value" NodeNum="0" />
+					<Variable Alias="O0x7010.1" VarType="0" BitSize="1" BitOffs="64" Index="28688" SubIndex="1" VarOffset="5" DisplayName="Control__Frequency select" NodeNum="0" />
+					<Variable Alias="O0x7010.2" VarType="0" BitSize="1" BitOffs="65" Index="28688" SubIndex="2" VarOffset="6" DisplayName="Control__Disable ramp" NodeNum="0" />
+					<Variable Alias="O0x7010.3" VarType="0" BitSize="1" BitOffs="66" Index="28688" SubIndex="3" VarOffset="7" DisplayName="Control__Go counter" NodeNum="0" />
+					<Variable Alias="O0x7010.17" VarType="4" BitSize="16" BitOffs="80" Index="28688" SubIndex="17" VarOffset="8" DisplayName="Frequency value" NodeNum="0" />
+					<Variable Alias="O0x7010.18" VarType="6" BitSize="32" BitOffs="96" Index="28688" SubIndex="18" VarOffset="9" DisplayName="Target counter value" NodeNum="0" />
+					<Variable Alias="O0x7020.3" VarType="0" BitSize="1" BitOffs="130" Index="28704" SubIndex="3" VarOffset="10" DisplayName="Control__Set counter" NodeNum="0" />
+					<Variable Alias="O0x7020.16" VarType="0" BitSize="1" BitOffs="143" Index="28704" SubIndex="16" VarOffset="11" DisplayName="Control__Reserved" NodeNum="0" />
+					<Variable Alias="O0x7020.17" VarType="6" BitSize="32" BitOffs="144" Index="28704" SubIndex="17" VarOffset="12" DisplayName="Set counter value" NodeNum="0" />
+					<Variable Alias="O0x7030.3" VarType="0" BitSize="1" BitOffs="178" Index="28720" SubIndex="3" VarOffset="13" DisplayName="Control__Set counter" NodeNum="0" />
+					<Variable Alias="O0x7030.16" VarType="0" BitSize="1" BitOffs="191" Index="28720" SubIndex="16" VarOffset="14" DisplayName="Control__Reserved" NodeNum="0" />
+					<Variable Alias="O0x7030.17" VarType="6" BitSize="32" BitOffs="192" Index="28720" SubIndex="17" VarOffset="15" DisplayName="Set counter value" NodeNum="0" />
+				</Outputs>
+			</slave>
+			<slave ID="4" Nodes="1">
+				<Inputs Size="4">
+					<Variable Alias="I0x3101.1" VarType="2" BitSize="8" BitOffs="256" Index="12545" SubIndex="1" VarOffset="0" DisplayName="Status" NodeNum="0" />
+					<Variable Alias="I0x3101.2" VarType="3" BitSize="16" BitOffs="264" Index="12545" SubIndex="2" VarOffset="1" DisplayName="Value" NodeNum="0" />
+					<Variable Alias="I0x3102.1" VarType="2" BitSize="8" BitOffs="280" Index="12546" SubIndex="1" VarOffset="2" DisplayName="Status" NodeNum="0" />
+					<Variable Alias="I0x3102.2" VarType="3" BitSize="16" BitOffs="288" Index="12546" SubIndex="2" VarOffset="3" DisplayName="Value" NodeNum="0" />
+				</Inputs>
+			</slave>
+			<slave ID="5" Nodes="1">
+				<Inputs Size="14">
+					<Variable Alias="I0x6000.1" VarType="0" BitSize="1" BitOffs="304" Index="24576" SubIndex="1" VarOffset="0" DisplayName="Status__Data error" NodeNum="0" />
+					<Variable Alias="I0x6000.2" VarType="0" BitSize="1" BitOffs="305" Index="24576" SubIndex="2" VarOffset="1" DisplayName="Status__Frame error" NodeNum="0" />
+					<Variable Alias="I0x6000.3" VarType="0" BitSize="1" BitOffs="306" Index="24576" SubIndex="3" VarOffset="2" DisplayName="Status__Power failure" NodeNum="0" />
+					<Variable Alias="I0x1C32.32" VarType="0" BitSize="1" BitOffs="317" Index="7218" SubIndex="32" VarOffset="3" DisplayName="Status__Sync error" NodeNum="0" />
+					<Variable Alias="I0x1800.7" VarType="0" BitSize="1" BitOffs="318" Index="6144" SubIndex="7" VarOffset="4" DisplayName="Status__TxPDO State" NodeNum="0" />
+					<Variable Alias="I0x1800.9" VarType="0" BitSize="1" BitOffs="319" Index="6144" SubIndex="9" VarOffset="5" DisplayName="Status__TxPDO Toggle" NodeNum="0" />
+					<Variable Alias="I0x6000.17" VarType="6" BitSize="32" BitOffs="320" Index="24576" SubIndex="17" VarOffset="6" DisplayName="Counter value" NodeNum="0" />
+					<Variable Alias="I0x6010.1" VarType="0" BitSize="1" BitOffs="352" Index="24592" SubIndex="1" VarOffset="7" DisplayName="Status__Data error" NodeNum="0" />
+					<Variable Alias="I0x6010.2" VarType="0" BitSize="1" BitOffs="353" Index="24592" SubIndex="2" VarOffset="8" DisplayName="Status__Frame error" NodeNum="0" />
+					<Variable Alias="I0x6010.3" VarType="0" BitSize="1" BitOffs="354" Index="24592" SubIndex="3" VarOffset="9" DisplayName="Status__Power failure" NodeNum="0" />
+					<Variable Alias="I0x1C32.32" VarType="0" BitSize="1" BitOffs="365" Index="7218" SubIndex="32" VarOffset="10" DisplayName="Status__Sync error" NodeNum="0" />
+					<Variable Alias="I0x1801.7" VarType="0" BitSize="1" BitOffs="366" Index="6145" SubIndex="7" VarOffset="11" DisplayName="Status__TxPDO State" NodeNum="0" />
+					<Variable Alias="I0x1801.9" VarType="0" BitSize="1" BitOffs="367" Index="6145" SubIndex="9" VarOffset="12" DisplayName="Status__TxPDO Toggle" NodeNum="0" />
+					<Variable Alias="I0x6010.17" VarType="6" BitSize="32" BitOffs="368" Index="24592" SubIndex="17" VarOffset="13" DisplayName="Counter value" NodeNum="0" />
+				</Inputs>
+			</slave>
+			<slave ID="6" Nodes="1">
+				<Inputs Size="6">
+					<Variable Alias="I0x10F4.2" VarType="11" BitSize="2" BitOffs="400" Index="4340" SubIndex="2" VarOffset="0" DisplayName="Sync Mode" NodeNum="0" />
+					<Variable Alias="I0x1800.9" VarType="0" BitSize="1" BitOffs="411" Index="6144" SubIndex="9" VarOffset="1" DisplayName="TxPDO toggle" NodeNum="0" />
+					<Variable Alias="I0x1800.7" VarType="0" BitSize="1" BitOffs="412" Index="6144" SubIndex="7" VarOffset="2" DisplayName="TxPDO state" NodeNum="0" />
+					<Variable Alias="I0x10F4.14" VarType="0" BitSize="1" BitOffs="413" Index="4340" SubIndex="14" VarOffset="3" DisplayName="Control value update toggle" NodeNum="0" />
+					<Variable Alias="I0x10F4.15" VarType="0" BitSize="1" BitOffs="414" Index="4340" SubIndex="15" VarOffset="4" DisplayName="Timestamp update toggle" NodeNum="0" />
+					<Variable Alias="I0x10F4.16" VarType="0" BitSize="1" BitOffs="415" Index="4340" SubIndex="16" VarOffset="5" DisplayName="External device not connected" NodeNum="0" />
+				</Inputs>
+			</slave>
+		</ElmoPI>
+		<ElmoMaster CreateGateway="True" />
+		<ElmoDC>
+			<Slave ID="0" />
+			<Slave ID="1">
+				<ActiveOpMode Name="Synchron" OpModeSelect="Synchron" />
+			</Slave>
+			<Slave ID="2">
+				<ActiveOpMode Name="FreeRun" OpModeSelect="FreeRun" />
+			</Slave>
+			<Slave ID="3">
+				<ActiveOpMode Name="Synchron" OpModeSelect="Synchron" />
+			</Slave>
+			<Slave ID="4">
+				<ActiveOpMode Name="Synchron" OpModeSelect="Synchron" />
+			</Slave>
+			<Slave ID="5">
+				<ActiveOpMode Name="Synchron" OpModeSelect="Synchron" />
+			</Slave>
+			<Slave ID="6">
+				<ActiveOpMode Name="FreeRun" OpModeSelect="FreeRun" />
+			</Slave>
+		</ElmoDC>
+		<ElmoInit>
+			<slave ID="0">
+				<UncheckInits />
+				<CoEInits />
+				<UserInits />
+			</slave>
+			<slave ID="1">
+				<UncheckInits>
+					<UncheckInit>set dc cycle time</UncheckInit>
+					<UncheckInit>set dc start time</UncheckInit>
+					<UncheckInit>set dc activation</UncheckInit>
+					<UncheckInit>set dc latch cfg</UncheckInit>
+				</UncheckInits>
+				<CoEInits />
+				<UserInits />
+			</slave>
+			<slave ID="2">
+				<UncheckInits>
+					<UncheckInit>set dc cycle time</UncheckInit>
+					<UncheckInit>set dc start time</UncheckInit>
+					<UncheckInit>set dc activation</UncheckInit>
+					<UncheckInit>set dc latch cfg</UncheckInit>
+				</UncheckInits>
+				<CoEInits />
+				<UserInits />
+			</slave>
+			<slave ID="3">
+				<UncheckInits>
+					<UncheckInit>set dc cycle time</UncheckInit>
+					<UncheckInit>set dc start time</UncheckInit>
+					<UncheckInit>set dc activation</UncheckInit>
+					<UncheckInit>set dc latch cfg</UncheckInit>
+				</UncheckInits>
+				<CoEInits />
+				<UserInits />
+			</slave>
+			<slave ID="4">
+				<UncheckInits>
+					<UncheckInit>set dc cycle time</UncheckInit>
+					<UncheckInit>set dc start time</UncheckInit>
+					<UncheckInit>set dc activation</UncheckInit>
+					<UncheckInit>set dc latch cfg</UncheckInit>
+				</UncheckInits>
+				<CoEInits />
+				<UserInits />
+			</slave>
+			<slave ID="5">
+				<UncheckInits>
+					<UncheckInit>set dc cycle time</UncheckInit>
+					<UncheckInit>set dc start time</UncheckInit>
+					<UncheckInit>set dc activation</UncheckInit>
+					<UncheckInit>set dc latch cfg</UncheckInit>
+				</UncheckInits>
+				<CoEInits />
+				<UserInits />
+			</slave>
+			<slave ID="6">
+				<UncheckInits>
+					<UncheckInit>set dc cycle time</UncheckInit>
+					<UncheckInit>set dc start time</UncheckInit>
+					<UncheckInit>set dc activation</UncheckInit>
+					<UncheckInit>set dc latch cfg</UncheckInit>
+				</UncheckInits>
+				<CoEInits />
+				<UserInits />
+			</slave>
+		</ElmoInit>
+		<ElmoFmmu>
+			<slave ID="0">
+				<SM SMNumber="0" ObjectsCount="1" ObjectsList="1A00" />
+			</slave>
+			<slave ID="1">
+				<SM SMNumber="3" ObjectsCount="2" ObjectsList="1A001A02" />
+			</slave>
+			<slave ID="2">
+				<SM SMNumber="2" ObjectsCount="4" ObjectsList="1600160116021603" />
+				<SM SMNumber="3" ObjectsCount="6" ObjectsList="1A051A041A001A011A021A03" />
+			</slave>
+			<slave ID="3">
+				<SM SMNumber="2" ObjectsCount="6" ObjectsList="1600160316051608160B160D" />
+				<SM SMNumber="3" ObjectsCount="4" ObjectsList="1A001A011A031A05" />
+			</slave>
+			<slave ID="4">
+				<SM SMNumber="3" ObjectsCount="2" ObjectsList="1A001A01" />
+			</slave>
+			<slave ID="5">
+				<SM SMNumber="3" ObjectsCount="2" ObjectsList="1A001A01" />
+			</slave>
+			<slave ID="6">
+				<SM SMNumber="2" ObjectsCount="1" ObjectsList="1600" />
+				<SM SMNumber="3" ObjectsCount="2" ObjectsList="1A011A00" />
+			</slave>
+		</ElmoFmmu>
+		<ElmoSlots>
+			<slave ID="0" />
+			<slave ID="1">
+				<Slot Name="AI Channel" Position="0" />
+				<Slot Name="AI Channel" Position="1" />
+				<Slot Name="Empty Slot" Position="2" />
+				<Slot Name="Empty Slot" Position="3" />
+				<Slot Name="Empty Slot" Position="4" />
+				<Slot Name="Empty Slot" Position="5" />
+				<Slot Name="Empty Slot" Position="6" />
+				<Slot Name="Empty Slot" Position="7" />
+				<Slot Name="HART Cmd3" Position="8" />
+				<Slot Name="HART Cmd3" Position="9" />
+				<Slot Name="Empty Slot" Position="10" />
+				<Slot Name="Empty Slot" Position="11" />
+				<Slot Name="Empty Slot" Position="12" />
+				<Slot Name="Empty Slot" Position="13" />
+				<Slot Name="Empty Slot" Position="14" />
+				<Slot Name="Empty Slot" Position="15" />
+				<Slot Name="Empty Slot" Position="16" />
+			</slave>
+			<slave ID="2" />
+			<slave ID="3" />
+			<slave ID="4" />
+			<slave ID="5" />
+			<slave ID="6" />
+		</ElmoSlots>
+		<ElmoEditedPdo>
+			<Slave ID="6">
+				<Pdo PdoType="Rx" Sm="2" Su="-1">
+					<Index>#x1600</Index>
+					<Name>IO Outputs</Name>
+				</Pdo>
+				<Pdo PdoType="Tx" Sm="3" Su="-1">
+					<Index>#x1A00</Index>
+					<Name>IO Inputs</Name>
+				</Pdo>
+			</Slave>
+		</ElmoEditedPdo>
+		<ElmoSlaveInfo />
+		<ElmoSlaveExtension>
+			<Slave ID="6">
+				<Info Mode="Primary" SetConfigForSecondary="True" Timestamp="None" SyncMaster="Primary" />
+			</Slave>
+		</ElmoSlaveExtension>
+	</ElmoSpecialResources>
+	<Config>
+		<Master>
+			<NIC>eth1</NIC>
+			<RNIC></RNIC>
+			<MaxFrameSize>1514</MaxFrameSize>
+			<SeparateIOUpdate>0</SeparateIOUpdate>
+			<CycleTime>1000</CycleTime>
+			<MBCycleTime>3000</MBCycleTime>
+			<InitialMasterState>8</InitialMasterState>
+			<AutoRecoveryTimeout>100</AutoRecoveryTimeout>
+			<ProcessImageUpdatePeriod>1000</ProcessImageUpdatePeriod>
+			<StatisticsUpdatePeriod>1000</StatisticsUpdatePeriod>
+			<DCUserShiftTime>100000</DCUserShiftTime>
+			<Info>
+				<Name>Master 1</Name>
+				<Destination>FFFFFFFFFFFF</Destination>
+				<Source>000000000000</Source>
+				<EtherType>a488</EtherType>
+			</Info>
+			<MailboxStates>
+				<StartAddr>4194304</StartAddr>
+				<Count>6</Count>
+			</MailboxStates>
+			<DC>
+				<ReferenceClock>0</ReferenceClock>
+				<Type>1</Type>
+				<MasterTimeAsRef>0</MasterTimeAsRef>
+			</DC>
+			<InitCmds>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<BeforeSlave>1</BeforeSlave>
+					<Comment>read slave count</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>7</Cmd>
+					<Adp>0</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>1</BeforeSlave>
+					<Comment>clear fmmu</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>8</Cmd>
+					<Adp>0</Adp>
+					<Ado>1536</Ado>
+					<DataLength>256</DataLength>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<BeforeSlave>1</BeforeSlave>
+					<Comment>clear sm</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>8</Cmd>
+					<Adp>0</Adp>
+					<Ado>2048</Ado>
+					<DataLength>256</DataLength>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<BeforeSlave>1</BeforeSlave>
+					<Comment>clear dc system time</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>8</Cmd>
+					<Adp>0</Adp>
+					<Ado>2320</Ado>
+					<DataLength>8</DataLength>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<BeforeSlave>1</BeforeSlave>
+					<Comment>clear dc cycle cfg</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>8</Cmd>
+					<Adp>0</Adp>
+					<Ado>2433</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<BeforeSlave>1</BeforeSlave>
+					<Comment>reset dc speed</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>8</Cmd>
+					<Adp>0</Adp>
+					<Ado>2352</Ado>
+					<Data>0010</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<BeforeSlave>1</BeforeSlave>
+					<Comment>configure dc filter</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>8</Cmd>
+					<Adp>0</Adp>
+					<Ado>2356</Ado>
+					<Data>000C</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+			</InitCmds>
+		</Master>
+		<Slave Physics="YKY" HotPlug="0" Segment="0" SegmentSubIndex="0">
+			<Info>
+				<NameInResource DSType="DS_301">g01</NameInResource>
+				<Name>EK1101</Name>
+				<PhysAddr>1001</PhysAddr>
+				<AutoIncAddr>0</AutoIncAddr>
+				<Identification Value="0" EnableIdentification="False">
+					<Ado>#x1000</Ado>
+				</Identification>
+				<Physics>YKY</Physics>
+				<VendorId>2</VendorId>
+				<ProductCode>72166482</ProductCode>
+				<RevisionNo>1179648</RevisionNo>
+				<RevisionReal>1179648</RevisionReal>
+				<SerialNo>0</SerialNo>
+				<ProductName>EK1101 EtherCAT Coupler (2A E-Bus, ID switch)</ProductName>
+			</Info>
+			<ProcessData>
+				<Recv>
+					<BitStart>0</BitStart>
+					<BitLength>16</BitLength>
+				</Recv>
+			</ProcessData>
+			<InitCmds>
+				<InitCmd>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set device state to INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>0</Adp>
+					<Ado>288</Ado>
+					<Data>0100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear dc activation</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>0</Adp>
+					<Ado>2432</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check device state for INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>0</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0100</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>assign EEPROM to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>0</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>0</Adp>
+					<Ado>320</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>040D</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>0</Adp>
+					<Ado>1282</Ado>
+					<Data>000108000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>0</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>02000000</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>0</Adp>
+					<Ado>1282</Ado>
+					<Data>00010A000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code </Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>0</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>522C4D04</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set physical address</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>0</Adp>
+					<Ado>16</Ado>
+					<Data>E903</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1001</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 0 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1001</Adp>
+					<Ado>2048</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 0 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1001</Adp>
+					<Ado>2048</Ado>
+					<Data>0010020000000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>clear fmmu 0 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1001</Adp>
+					<Ado>1536</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set fmmu 0 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1001</Adp>
+					<Ado>1536</Ado>
+					<Data>00100100020000070010000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1001</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>assign EEPROM to PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1001</Adp>
+					<Ado>1280</Ado>
+					<Data>01</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>II</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>0</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1001</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1001</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>BI</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>0</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set device state to BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1001</Adp>
+					<Ado>288</Ado>
+					<Data>0300</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>check device state for BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1001</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0300</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>set device state to OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1001</Adp>
+					<Ado>288</Ado>
+					<Data>0800</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>check device state for OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1001</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0800</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>set device state to SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1001</Adp>
+					<Ado>288</Ado>
+					<Data>0400</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>check device state for SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1001</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0400</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+			</InitCmds>
+		</Slave>
+		<Slave Physics="KK" HotPlug="0" Segment="1" SegmentSubIndex="0">
+			<Info>
+				<NameInResource DSType="DS_301">g02</NameInResource>
+				<Name>EL3182</Name>
+				<PhysAddr>1002</PhysAddr>
+				<AutoIncAddr>65535</AutoIncAddr>
+				<Identification Value="0" EnableIdentification="False">
+					<Ado>#x0012</Ado>
+				</Identification>
+				<Physics>KK</Physics>
+				<VendorId>2</VendorId>
+				<ProductCode>208547922</ProductCode>
+				<RevisionNo>1048576</RevisionNo>
+				<RevisionReal>1048576</RevisionReal>
+				<SerialNo>0</SerialNo>
+				<FirmwareVersion>04</FirmwareVersion>
+				<ProductName>EL3182 2Ch. Ana. Input 4-20mA, HART</ProductName>
+			</Info>
+			<ProcessData>
+				<Recv>
+					<BitStart>16</BitStart>
+					<BitLength>64</BitLength>
+				</Recv>
+			</ProcessData>
+			<Mailbox>
+				<Send>
+					<Start>4096</Start>
+					<Length>128</Length>
+				</Send>
+				<Recv>
+					<Start>4224</Start>
+					<Length>128</Length>
+					<StatusBitAddr>0</StatusBitAddr>
+				</Recv>
+				<Protocol>FoE</Protocol>
+				<Protocol>CoE</Protocol>
+				<FoE />
+				<CoE>
+					<InitCmds>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download sm (1C13) pdo entries</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7187</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0200001A021A</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download sm (1C12) pdo entries</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7186</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="0">
+							<Transition>PS</Transition>
+							<Comment />
+							<IndexType>ESI</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>32896</Index>
+							<SubIndex>1</SubIndex>
+							<Data>000000030300</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="0">
+							<Transition>PS</Transition>
+							<Comment />
+							<IndexType>ESI</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>32912</Index>
+							<SubIndex>1</SubIndex>
+							<Data>000000030300</Data>
+						</InitCmd>
+					</InitCmds>
+				</CoE>
+			</Mailbox>
+			<InitCmds>
+				<InitCmd>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set device state to INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65535</Adp>
+					<Ado>288</Ado>
+					<Data>1100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear dc activation</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65535</Adp>
+					<Ado>2432</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check device state for INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65535</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0100</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>assign EEPROM to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65535</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65535</Adp>
+					<Ado>320</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0504</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65535</Adp>
+					<Ado>1282</Ado>
+					<Data>000108000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65535</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>02000000</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65535</Adp>
+					<Ado>1282</Ado>
+					<Data>00010A000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code </Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65535</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>52306E0C</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set physical address</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65535</Adp>
+					<Ado>16</Ado>
+					<Data>EA03</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>288</Ado>
+					<Data>1200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 0 (mailbox out)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>2048</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 0 (mailbox out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>2048</Ado>
+					<Data>0010800026000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 1 (mailbox in)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>2056</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 1 (mailbox in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>2056</Ado>
+					<Data>8010800022000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 0 (bootstrap out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>2048</Ado>
+					<Data>0010f40026000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 1 (bootstrap in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>2056</Ado>
+					<Data>f410f40022000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 2 (output)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>2064</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 2 (output)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>2064</Ado>
+					<Data>0011000004000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 3 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>2072</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 3 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>2072</Ado>
+					<Data>8011080020000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>clear fmmu 0 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>1536</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set fmmu 0 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>1536</Ado>
+					<Data>02100100080000078011000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Comment>clear fmmu 1 (mailbox state)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>1552</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set fmmu 1 (mailbox state)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>1552</Ado>
+					<Data>00004000010000000D08000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1002</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>assign EEPROM to PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>1280</Ado>
+					<Data>01</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>II</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65535</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1002</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>BI</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65535</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set device state to BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>288</Ado>
+					<Data>0300</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>check device state for BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1002</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0300</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>set device state to OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>288</Ado>
+					<Data>0800</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>check device state for OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1002</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0800</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>set device state to SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1002</Adp>
+					<Ado>288</Ado>
+					<Data>0400</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>check device state for SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1002</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0400</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+			</InitCmds>
+			<PreviousPort>
+				<Port>B</Port>
+				<PhysAddr>1001</PhysAddr>
+			</PreviousPort>
+			<DC>
+				<ReferenceClock>1</ReferenceClock>
+				<CycleTime0>1000</CycleTime0>
+				<CycleTime1>0</CycleTime1>
+				<ShiftTime>0</ShiftTime>
+			</DC>
+		</Slave>
+		<Slave Physics="KK" HotPlug="0" Segment="2" SegmentSubIndex="0">
+			<Info>
+				<NameInResource DSType="DS_301">g03</NameInResource>
+				<Name>EL6224</Name>
+				<PhysAddr>1003</PhysAddr>
+				<AutoIncAddr>65534</AutoIncAddr>
+				<Identification Value="0" EnableIdentification="False">
+					<Ado>#x0012</Ado>
+				</Identification>
+				<Physics>KK</Physics>
+				<VendorId>2</VendorId>
+				<ProductCode>407908434</ProductCode>
+				<RevisionNo>1310720</RevisionNo>
+				<RevisionReal>1310720</RevisionReal>
+				<SerialNo>0</SerialNo>
+				<FirmwareVersion>12</FirmwareVersion>
+				<ProductName>EL6224 (IO Link Master)</ProductName>
+			</Info>
+			<ProcessData>
+				<Recv>
+					<BitStart>80</BitStart>
+					<BitLength>48</BitLength>
+				</Recv>
+			</ProcessData>
+			<Mailbox>
+				<Send>
+					<Start>4096</Start>
+					<Length>256</Length>
+				</Send>
+				<Recv>
+					<Start>4352</Start>
+					<Length>256</Length>
+					<StatusBitAddr>1</StatusBitAddr>
+				</Recv>
+				<Protocol>FoE</Protocol>
+				<Protocol>CoE</Protocol>
+				<FoE />
+				<CoE>
+					<InitCmds>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download pdo (1A00) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>6656</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download pdo (1A01) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>6657</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download pdo (1A02) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>6658</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download pdo (1A03) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>6659</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download sm (1C13) pdo entries</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7187</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0600051A041A001A011A021A031A</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download pdo (1600) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>5632</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download pdo (1601) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>5633</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download pdo (1602) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>5634</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download pdo (1603) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>5635</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download sm (1C12) pdo entries</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7186</Index>
+							<SubIndex>0</SubIndex>
+							<Data>04000016011602160316</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="0">
+							<Transition>PS</Transition>
+							<Comment />
+							<IndexType>ESI</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>32768</Index>
+							<SubIndex>1</SubIndex>
+							<Data>0000000000000000000000000000000000000000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="0">
+							<Transition>PS</Transition>
+							<Comment />
+							<IndexType>ESI</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>32784</Index>
+							<SubIndex>1</SubIndex>
+							<Data>0000000000000000000000000000000000000000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="0">
+							<Transition>PS</Transition>
+							<Comment />
+							<IndexType>ESI</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>32800</Index>
+							<SubIndex>1</SubIndex>
+							<Data>0000000000000000000000000000000000000000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="0">
+							<Transition>PS</Transition>
+							<Comment />
+							<IndexType>ESI</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>32816</Index>
+							<SubIndex>1</SubIndex>
+							<Data>0000000000000000000000000000000000000000</Data>
+						</InitCmd>
+					</InitCmds>
+				</CoE>
+			</Mailbox>
+			<InitCmds>
+				<InitCmd>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set device state to INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65534</Adp>
+					<Ado>288</Ado>
+					<Data>1100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear dc activation</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65534</Adp>
+					<Ado>2432</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check device state for INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65534</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0100</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>assign EEPROM to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65534</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65534</Adp>
+					<Ado>320</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0504</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65534</Adp>
+					<Ado>1282</Ado>
+					<Data>000108000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65534</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>02000000</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65534</Adp>
+					<Ado>1282</Ado>
+					<Data>00010A000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code </Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65534</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>52305018</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set physical address</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65534</Adp>
+					<Ado>16</Ado>
+					<Data>EB03</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 0 (mailbox out)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>2048</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 0 (mailbox out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>2048</Ado>
+					<Data>0010000126000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 1 (mailbox in)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>2056</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 1 (mailbox in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>2056</Ado>
+					<Data>0011000122000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 0 (bootstrap out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>2048</Ado>
+					<Data>0010f40026000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 1 (bootstrap in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>2056</Ado>
+					<Data>f410f40022000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 2 (output)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>2064</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 2 (output)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>2064</Ado>
+					<Data>0012000024000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 3 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>2072</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 3 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>2072</Ado>
+					<Data>0013060020000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>clear fmmu 0 (output)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>1536</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>clear fmmu 1 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>1552</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set fmmu 1 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>1552</Ado>
+					<Data>0A100100060000070013000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Comment>clear fmmu 2 (mailbox state)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>1568</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set fmmu 2 (mailbox state)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>1568</Ado>
+					<Data>00004000010001010D08000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1003</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>assign EEPROM to PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>1280</Ado>
+					<Data>01</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>II</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65534</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1003</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>BI</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65534</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set device state to BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>288</Ado>
+					<Data>0300</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>check device state for BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1003</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0300</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>set device state to OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>288</Ado>
+					<Data>0800</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>check device state for OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1003</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0800</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>set device state to SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1003</Adp>
+					<Ado>288</Ado>
+					<Data>0400</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>check device state for SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1003</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0400</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+			</InitCmds>
+			<PreviousPort>
+				<Port>B</Port>
+				<PhysAddr>1002</PhysAddr>
+			</PreviousPort>
+			<DC>
+				<ReferenceClock>0</ReferenceClock>
+				<CycleTime0>1000</CycleTime0>
+				<CycleTime1>0</CycleTime1>
+				<ShiftTime>0</ShiftTime>
+			</DC>
+		</Slave>
+		<Slave Physics="KK" HotPlug="0" Segment="3" SegmentSubIndex="0">
+			<Info>
+				<NameInResource DSType="DS_301">g04</NameInResource>
+				<Name>EL2522</Name>
+				<PhysAddr>1004</PhysAddr>
+				<AutoIncAddr>65533</AutoIncAddr>
+				<Identification Value="0" EnableIdentification="False">
+					<Ado>#x0012</Ado>
+				</Identification>
+				<Physics>KK</Physics>
+				<VendorId>2</VendorId>
+				<ProductCode>165294162</ProductCode>
+				<RevisionNo>1376256</RevisionNo>
+				<RevisionReal>1376256</RevisionReal>
+				<SerialNo>0</SerialNo>
+				<FirmwareVersion>06</FirmwareVersion>
+				<ProductName>EL2522 2Ch. Pulse Train Output</ProductName>
+			</Info>
+			<ProcessData>
+				<Send>
+					<BitStart>0</BitStart>
+					<BitLength>224</BitLength>
+				</Send>
+				<Recv>
+					<BitStart>128</BitStart>
+					<BitLength>128</BitLength>
+				</Recv>
+			</ProcessData>
+			<Mailbox>
+				<Send>
+					<Start>4096</Start>
+					<Length>128</Length>
+				</Send>
+				<Recv>
+					<Start>4224</Start>
+					<Length>128</Length>
+					<StatusBitAddr>2</StatusBitAddr>
+				</Recv>
+				<Protocol>FoE</Protocol>
+				<Protocol>CoE</Protocol>
+				<FoE />
+				<CoE>
+					<InitCmds>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download sm (1C13) pdo entries</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7187</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0400001A011A031A051A</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download sm (1C12) pdo entries</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7186</Index>
+							<SubIndex>0</SubIndex>
+							<Data>060000160316051608160B160D16</Data>
+						</InitCmd>
+					</InitCmds>
+				</CoE>
+			</Mailbox>
+			<InitCmds>
+				<InitCmd>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set device state to INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65533</Adp>
+					<Ado>288</Ado>
+					<Data>1100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear dc activation</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65533</Adp>
+					<Ado>2432</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check device state for INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65533</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0100</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>assign EEPROM to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65533</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65533</Adp>
+					<Ado>320</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0504</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65533</Adp>
+					<Ado>1282</Ado>
+					<Data>000108000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65533</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>02000000</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65533</Adp>
+					<Ado>1282</Ado>
+					<Data>00010A000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code </Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65533</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>5230DA09</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set physical address</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65533</Adp>
+					<Ado>16</Ado>
+					<Data>EC03</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 0 (mailbox out)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>2048</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 0 (mailbox out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>2048</Ado>
+					<Data>0010800026000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 1 (mailbox in)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>2056</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 1 (mailbox in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>2056</Ado>
+					<Data>8010800022000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 0 (bootstrap out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>2048</Ado>
+					<Data>0010f40026000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 1 (bootstrap in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>2056</Ado>
+					<Data>f410f40022000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 2 (output)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>2064</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 2 (output)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>2064</Ado>
+					<Data>00111C0024000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 3 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>2072</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 3 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>2072</Ado>
+					<Data>8012100020000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>clear fmmu 0 (output)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>1536</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set fmmu 0 (output)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>1536</Ado>
+					<Data>002001001C0000070011000201000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>clear fmmu 1 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>1552</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set fmmu 1 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>1552</Ado>
+					<Data>10100100100000078012000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Comment>clear fmmu 2 (mailbox state)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>1568</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set fmmu 2 (mailbox state)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>1568</Ado>
+					<Data>00004000010002020D08000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1004</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>assign EEPROM to PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>1280</Ado>
+					<Data>01</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>II</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65533</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1004</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>BI</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65533</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set device state to BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>288</Ado>
+					<Data>0300</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>check device state for BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1004</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0300</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>set device state to OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>288</Ado>
+					<Data>0800</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>check device state for OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1004</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0800</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>set device state to SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1004</Adp>
+					<Ado>288</Ado>
+					<Data>0400</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>check device state for SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1004</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0400</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+			</InitCmds>
+			<PreviousPort>
+				<Port>B</Port>
+				<PhysAddr>1003</PhysAddr>
+			</PreviousPort>
+			<DC>
+				<ReferenceClock>0</ReferenceClock>
+				<CycleTime0>1000</CycleTime0>
+				<CycleTime1>0</CycleTime1>
+				<ShiftTime>0</ShiftTime>
+			</DC>
+		</Slave>
+		<Slave Physics="KK" HotPlug="0" Segment="4" SegmentSubIndex="0">
+			<Info>
+				<NameInResource DSType="DS_301">g05</NameInResource>
+				<Name>EL3162</Name>
+				<PhysAddr>1005</PhysAddr>
+				<AutoIncAddr>65532</AutoIncAddr>
+				<Identification Value="0" EnableIdentification="False">
+					<Ado>#x0012</Ado>
+				</Identification>
+				<Physics>KK</Physics>
+				<VendorId>2</VendorId>
+				<ProductCode>207237202</ProductCode>
+				<RevisionNo>1245184</RevisionNo>
+				<RevisionReal>1245184</RevisionReal>
+				<SerialNo>0</SerialNo>
+				<FirmwareVersion>13</FirmwareVersion>
+				<ProductName>EL3162 2Ch. Ana. Input 0-10V</ProductName>
+			</Info>
+			<ProcessData>
+				<Recv>
+					<BitStart>256</BitStart>
+					<BitLength>48</BitLength>
+				</Recv>
+			</ProcessData>
+			<Mailbox>
+				<Send>
+					<Start>4096</Start>
+					<Length>128</Length>
+				</Send>
+				<Recv>
+					<Start>4224</Start>
+					<Length>128</Length>
+					<StatusBitAddr>3</StatusBitAddr>
+				</Recv>
+				<Protocol>FoE</Protocol>
+				<Protocol>CoE</Protocol>
+				<FoE />
+				<CoE>
+					<InitCmds>
+						<InitCmd CompleteAccess="0">
+							<Transition>PS</Transition>
+							<Comment>clear sm pdos(1c13)</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7187</Index>
+							<SubIndex>0</SubIndex>
+							<Data>00</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="0">
+							<Transition>PS</Transition>
+							<Comment>clear sm pdos(1c12)</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7186</Index>
+							<SubIndex>0</SubIndex>
+							<Data>00</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="0">
+							<Transition>PS</Transition>
+							<Comment>download pdo(1c13) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>3000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7187</Index>
+							<SubIndex>1</SubIndex>
+							<Data>001A</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="0">
+							<Transition>PS</Transition>
+							<Comment>download pdo(1c13) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>3000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7187</Index>
+							<SubIndex>2</SubIndex>
+							<Data>011A</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="0">
+							<Transition>PS</Transition>
+							<Comment>download pdo(1c13) count</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>3000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7187</Index>
+							<SubIndex>0</SubIndex>
+							<Data>02</Data>
+						</InitCmd>
+					</InitCmds>
+				</CoE>
+			</Mailbox>
+			<InitCmds>
+				<InitCmd>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set device state to INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65532</Adp>
+					<Ado>288</Ado>
+					<Data>1100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear dc activation</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65532</Adp>
+					<Ado>2432</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check device state for INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65532</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0100</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>assign EEPROM to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65532</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65532</Adp>
+					<Ado>320</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0504</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65532</Adp>
+					<Ado>1282</Ado>
+					<Data>000108000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65532</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>02000000</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65532</Adp>
+					<Ado>1282</Ado>
+					<Data>00010A000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code </Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65532</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>52305A0C</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set physical address</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65532</Adp>
+					<Ado>16</Ado>
+					<Data>ED03</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>288</Ado>
+					<Data>1200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 0 (mailbox out)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>2048</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 0 (mailbox out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>2048</Ado>
+					<Data>0010800026000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 1 (mailbox in)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>2056</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 1 (mailbox in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>2056</Ado>
+					<Data>8010800022000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 0 (bootstrap out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>2048</Ado>
+					<Data>0010f40026000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 1 (bootstrap in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>2056</Ado>
+					<Data>f410f40022000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 2 (output)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>2064</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 2 (output)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>2064</Ado>
+					<Data>0011000004000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 3 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>2072</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 3 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>2072</Ado>
+					<Data>8011060020000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>clear fmmu 0 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>1536</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set fmmu 0 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>1536</Ado>
+					<Data>20100100060000078011000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Comment>clear fmmu 1 (mailbox state)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>1552</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set fmmu 1 (mailbox state)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>1552</Ado>
+					<Data>00004000010003030D08000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1005</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>assign EEPROM to PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>1280</Ado>
+					<Data>01</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>II</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65532</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1005</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>BI</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65532</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set device state to BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>288</Ado>
+					<Data>0300</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>check device state for BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1005</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0300</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>set device state to OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>288</Ado>
+					<Data>0800</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>check device state for OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1005</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0800</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>set device state to SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1005</Adp>
+					<Ado>288</Ado>
+					<Data>0400</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>check device state for SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1005</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0400</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+			</InitCmds>
+			<PreviousPort>
+				<Port>B</Port>
+				<PhysAddr>1004</PhysAddr>
+			</PreviousPort>
+			<DC>
+				<ReferenceClock>0</ReferenceClock>
+				<CycleTime0>1000</CycleTime0>
+				<CycleTime1>0</CycleTime1>
+				<ShiftTime>0</ShiftTime>
+			</DC>
+		</Slave>
+		<Slave Physics="KK" HotPlug="0" Segment="5" SegmentSubIndex="0">
+			<Info>
+				<NameInResource DSType="DS_301">g06</NameInResource>
+				<Name>EL5002</Name>
+				<PhysAddr>1006</PhysAddr>
+				<AutoIncAddr>65531</AutoIncAddr>
+				<Identification Value="0" EnableIdentification="False">
+					<Ado>#x0012</Ado>
+				</Identification>
+				<Physics>KK</Physics>
+				<VendorId>2</VendorId>
+				<ProductCode>327823442</ProductCode>
+				<RevisionNo>1179648</RevisionNo>
+				<RevisionReal>1179648</RevisionReal>
+				<SerialNo>0</SerialNo>
+				<FirmwareVersion>02</FirmwareVersion>
+				<ProductName>EL5002 2Ch. SSI Encoder</ProductName>
+			</Info>
+			<ProcessData>
+				<Recv>
+					<BitStart>304</BitStart>
+					<BitLength>96</BitLength>
+				</Recv>
+			</ProcessData>
+			<Mailbox>
+				<Send>
+					<Start>4096</Start>
+					<Length>128</Length>
+				</Send>
+				<Recv>
+					<Start>4224</Start>
+					<Length>128</Length>
+					<StatusBitAddr>4</StatusBitAddr>
+				</Recv>
+				<Protocol>FoE</Protocol>
+				<Protocol>CoE</Protocol>
+				<FoE />
+				<CoE>
+					<InitCmds />
+				</CoE>
+			</Mailbox>
+			<InitCmds>
+				<InitCmd>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set device state to INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65531</Adp>
+					<Ado>288</Ado>
+					<Data>1100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear dc activation</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65531</Adp>
+					<Ado>2432</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check device state for INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65531</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0100</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>assign EEPROM to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65531</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65531</Adp>
+					<Ado>320</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0504</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65531</Adp>
+					<Ado>1282</Ado>
+					<Data>000108000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65531</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>02000000</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65531</Adp>
+					<Ado>1282</Ado>
+					<Data>00010A000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code </Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65531</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>52308A13</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set physical address</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65531</Adp>
+					<Ado>16</Ado>
+					<Data>EE03</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 0 (mailbox out)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>2048</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 0 (mailbox out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>2048</Ado>
+					<Data>0010800026000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 1 (mailbox in)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>2056</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 1 (mailbox in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>2056</Ado>
+					<Data>8010800022000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 0 (bootstrap out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>2048</Ado>
+					<Data>0010f40026000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 1 (bootstrap in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>2056</Ado>
+					<Data>f410f40022000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 2 (output)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>2064</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 2 (output)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>2064</Ado>
+					<Data>0011000004000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 3 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>2072</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 3 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>2072</Ado>
+					<Data>80110C0020000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>clear fmmu 0 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>1536</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set fmmu 0 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>1536</Ado>
+					<Data>261001000C0000078011000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Comment>clear fmmu 1 (mailbox state)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>1552</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set fmmu 1 (mailbox state)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>1552</Ado>
+					<Data>00004000010004040D08000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1006</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>assign EEPROM to PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>1280</Ado>
+					<Data>01</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>II</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65531</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1006</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>BI</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65531</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set device state to BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>288</Ado>
+					<Data>0300</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>check device state for BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1006</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0300</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>set device state to OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>288</Ado>
+					<Data>0800</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>check device state for OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1006</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0800</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>set device state to SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1006</Adp>
+					<Ado>288</Ado>
+					<Data>0400</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>check device state for SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1006</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0400</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+			</InitCmds>
+			<PreviousPort>
+				<Port>B</Port>
+				<PhysAddr>1005</PhysAddr>
+			</PreviousPort>
+			<DC>
+				<ReferenceClock>0</ReferenceClock>
+				<CycleTime0>1000</CycleTime0>
+				<CycleTime1>0</CycleTime1>
+				<ShiftTime>0</ShiftTime>
+			</DC>
+		</Slave>
+		<Slave Physics="KK" HotPlug="0" Segment="6" SegmentSubIndex="0">
+			<Info>
+				<NameInResource DSType="DS_301">g07</NameInResource>
+				<Name>EL6692</Name>
+				<PhysAddr>1007</PhysAddr>
+				<AutoIncAddr>65530</AutoIncAddr>
+				<Identification Value="0" EnableIdentification="False">
+					<Ado>#x0012</Ado>
+				</Identification>
+				<Physics>KK</Physics>
+				<VendorId>2</VendorId>
+				<ProductCode>438579282</ProductCode>
+				<RevisionNo>1048576</RevisionNo>
+				<RevisionReal>1048576</RevisionReal>
+				<SerialNo>0</SerialNo>
+				<FirmwareVersion>08</FirmwareVersion>
+				<ProductName>EL6692 EtherCAT Bridge terminal (Primary)</ProductName>
+			</Info>
+			<ProcessData>
+				<Recv>
+					<BitStart>400</BitStart>
+					<BitLength>16</BitLength>
+				</Recv>
+			</ProcessData>
+			<Mailbox>
+				<Send>
+					<Start>4096</Start>
+					<Length>256</Length>
+				</Send>
+				<Recv>
+					<Start>4352</Start>
+					<Length>256</Length>
+					<StatusBitAddr>5</StatusBitAddr>
+				</Recv>
+				<Protocol>EoE</Protocol>
+				<Protocol>FoE</Protocol>
+				<Protocol>CoE</Protocol>
+				<EoE />
+				<FoE />
+				<CoE>
+					<InitCmds>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download pdo (1A00) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>6656</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download sm (1C13) pdo entries</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7187</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0200011A001A</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download pdo (1600) entry</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>5632</Index>
+							<SubIndex>0</SubIndex>
+							<Data>0000</Data>
+						</InitCmd>
+						<InitCmd CompleteAccess="1">
+							<Transition>PS</Transition>
+							<Comment>download sm (1C12) pdo entries</Comment>
+							<IndexType>Studio generated</IndexType>
+							<Timeout>10000</Timeout>
+							<Ccs>1</Ccs>
+							<Index>7186</Index>
+							<SubIndex>0</SubIndex>
+							<Data>01000016</Data>
+						</InitCmd>
+					</InitCmds>
+				</CoE>
+			</Mailbox>
+			<InitCmds>
+				<InitCmd>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set device state to INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65530</Adp>
+					<Ado>288</Ado>
+					<Data>1100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear dc activation</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65530</Adp>
+					<Ado>2432</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check device state for INIT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65530</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0100</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>assign EEPROM to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65530</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>check PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65530</Adp>
+					<Ado>320</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>050C</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65530</Adp>
+					<Ado>1282</Ado>
+					<Data>000108000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check vendor id</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65530</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>02000000</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code request</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65530</Adp>
+					<Ado>1282</Ado>
+					<Data>00010A000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check product code </Comment>
+					<Requires>cycle</Requires>
+					<Cmd>1</Cmd>
+					<Adp>65530</Adp>
+					<Ado>1288</Ado>
+					<Data>00000000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>5230241A</Data>
+						<Timeout>100</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set physical address</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65530</Adp>
+					<Ado>16</Ado>
+					<Data>EF03</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 0 (mailbox out)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>2048</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 0 (mailbox out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>2048</Ado>
+					<Data>0010000126000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Transition>PI</Transition>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<BeforeSlave>0</BeforeSlave>
+					<Comment>clear sm 1 (mailbox in)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>2056</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set sm 1 (mailbox in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>2056</Ado>
+					<Data>0011000122000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 0 (bootstrap out)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>2048</Ado>
+					<Data>0010f40026000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set sm 1 (bootstrap in)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>2056</Ado>
+					<Data>f410f40022000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 2 (output)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>2064</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 2 (output)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>2064</Ado>
+					<Data>0012000024000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>SP</Transition>
+					<Transition>SI</Transition>
+					<Transition>OP</Transition>
+					<Transition>OI</Transition>
+					<Comment>clear sm 3 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>2072</Ado>
+					<Data>0000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set sm 3 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>2072</Ado>
+					<Data>0018020020000100</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>clear fmmu 0 (output)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>1536</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>clear fmmu 1 (input)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>1552</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Comment>set fmmu 1 (input)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>1552</Ado>
+					<Data>32100100020000070018000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SI</Transition>
+					<Transition>OI</Transition>
+					<Transition>PI</Transition>
+					<Transition>BI</Transition>
+					<Comment>clear fmmu 2 (mailbox state)</Comment>
+					<Requires>frame</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>1568</Ado>
+					<Data>00000000000000000000000000000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>set fmmu 2 (mailbox state)</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>1568</Ado>
+					<Data>00004000010005050D08000101000000</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SP</Transition>
+					<Transition>OP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1007</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>IB</Transition>
+					<Comment>assign EEPROM to PDI</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>1280</Ado>
+					<Data>01</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>II</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65530</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>set device state to PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>288</Ado>
+					<Data>0200</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Comment>check device state for PREOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1007</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0200</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IP</Transition>
+					<Transition>BI</Transition>
+					<Comment>assign EEPROM back to ECAT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>2</Cmd>
+					<Adp>65530</Adp>
+					<Ado>1280</Ado>
+					<Data>00</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>set device state to BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>288</Ado>
+					<Data>0300</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>IB</Transition>
+					<Comment>check device state for BOOT</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1007</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0300</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>set device state to OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>288</Ado>
+					<Data>0800</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>SO</Transition>
+					<Comment>check device state for OP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1007</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0800</Data>
+						<DataMask>0F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>set device state to SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>5</Cmd>
+					<Adp>1007</Adp>
+					<Ado>288</Ado>
+					<Data>0400</Data>
+					<Retries>3</Retries>
+				</InitCmd>
+				<InitCmd>
+					<Transition>PS</Transition>
+					<Transition>OS</Transition>
+					<Comment>check device state for SAFEOP</Comment>
+					<Requires>cycle</Requires>
+					<Cmd>4</Cmd>
+					<Adp>1007</Adp>
+					<Ado>304</Ado>
+					<Data>0000</Data>
+					<Retries>3</Retries>
+					<Validate>
+						<Data>0400</Data>
+						<DataMask>1F00</DataMask>
+						<Timeout>10000</Timeout>
+					</Validate>
+				</InitCmd>
+			</InitCmds>
+			<PreviousPort>
+				<Port>B</Port>
+				<PhysAddr>1006</PhysAddr>
+			</PreviousPort>
+			<DC>
+				<ReferenceClock>0</ReferenceClock>
+				<CycleTime0>1000</CycleTime0>
+				<CycleTime1>0</CycleTime1>
+				<ShiftTime>0</ShiftTime>
+			</DC>
+		</Slave>
+		<Cyclic>
+			<Frame CycleTimeFactor="0" CycleTimeShiftFactor="0">
+				<Cmd>
+					<State>SAFEOP</State>
+					<State>PREOP</State>
+					<State>OP</State>
+					<Comment><![CDATA[ LRD cmd (carried items:
+
+Slave 1.ID.ID;
+Slave 2.AI Standard Channel 1.Status__Underrange;
+Slave 2.AI Standard Channel 1.Status__Overrange;
+Slave 2.AI Standard Channel 1.Status__Limit 1;
+Slave 2.AI Standard Channel 1.Status__Limit 2;
+Slave 2.AI Standard Channel 1.Status__Error;
+Slave 2.AI Standard Channel 1.Status__;
+Slave 2.AI Standard Channel 1.Status__;
+Slave 2.AI Standard Channel 1.Status__Sync error;
+Slave 2.AI Standard Channel 1.Status__TxPDO State;
+Slave 2.AI Standard Channel 1.Status__TxPDO Toggle;
+Slave 2.AI Standard Channel 1.Value;
+Slave 2.AI Standard Channel 2.Status__Underrange;
+Slave 2.AI Standard Channel 2.Status__Overrange;
+Slave 2.AI Standard Channel 2.Status__Limit 1;
+Slave 2.AI Standard Channel 2.Status__Limit 2;
+Slave 2.AI Standard Channel 2.Status__Error;
+Slave 2.AI Standard Channel 2.Status__;
+Slave 2.AI Standard Channel 2.Status__;
+Slave 2.AI Standard Channel 2.Status__Sync error;
+Slave 2.AI Standard Channel 2.Status__TxPDO State;
+Slave 2.AI Standard Channel 2.Status__TxPDO Toggle;
+Slave 2.AI Standard Channel 2.Value;
+Slave 3.DeviceState Inputs Device.__Alignment_1;
+Slave 3.DeviceState Inputs Device.__Alignment_2;
+Slave 3.DeviceState Inputs Device.Device Diag;
+Slave 3.DeviceState Inputs Device.__Alignment_4;
+Slave 3.DeviceState Inputs Device.Device State;
+Slave 3.DeviceState Inputs.State Ch1;
+Slave 3.DeviceState Inputs.State Ch2;
+Slave 3.DeviceState Inputs.State Ch3;
+Slave 3.DeviceState Inputs.State Ch4;
+Slave 4.PTO Status Channel 1.Status__Sel. Ack/End counter;
+Slave 4.PTO Status Channel 1.Status__Ramp active;
+Slave 4.PTO Status Channel 1.Status__;
+Slave 4.PTO Status Channel 1.Status__Error;
+Slave 4.PTO Status Channel 1.Status__;
+Slave 4.PTO Status Channel 1.Status__Sync error;
+Slave 4.PTO Status Channel 1.Status__;
+Slave 4.PTO Status Channel 1.Status__TxPDO Toggle;
+Slave 4.PTO Status Channel 2.Status__Sel. Ack/End counter;
+Slave 4.PTO Status Channel 2.Status__Ramp active;
+Slave 4.PTO Status Channel 2.Status__;
+Slave 4.PTO Status Channel 2.Status__Error;
+Slave 4.PTO Status Channel 2.Status__;
+Slave 4.PTO Status Channel 2.Status__Sync error;
+Slave 4.PTO Status Channel 2.Status__;
+Slave 4.PTO Status Channel 2.Status__TxPDO Toggle;
+Slave 4.ENC Status Channel 1.Status__;
+Slave 4.ENC Status Channel 1.Status__Set counter done;
+Slave 4.ENC Status Channel 1.Status__Counter underflow;
+Slave 4.ENC Status Channel 1.Status__Counter overflow;
+Slave 4.ENC Status Channel 1.Status__;
+Slave 4.ENC Status Channel 1.Status__Sync error;
+Slave 4.ENC Status Channel 1.Status__TxPDO State;
+Slave 4.ENC Status Channel 1.Status__TxPDO Toggle;
+Slave 4.ENC Status Channel 1.Counter value;
+Slave 4.ENC Status Channel 2.Status__;
+Slave 4.ENC Status Channel 2.Status__Set counter done;
+Slave 4.ENC Status Channel 2.Status__Counter underflow;
+Slave 4.ENC Status Channel 2.Status__Counter overflow;
+Slave 4.ENC Status Channel 2.Status__;
+Slave 4.ENC Status Channel 2.Status__Sync error;
+Slave 4.ENC Status Channel 2.Status__TxPDO State;
+Slave 4.ENC Status Channel 2.Status__TxPDO Toggle;
+Slave 4.ENC Status Channel 2.Counter value;
+Slave 5.Channel 1.Status;
+Slave 5.Channel 1.Value;
+Slave 5.Channel 2.Status;
+Slave 5.Channel 2.Value;
+Slave 6.SSI Inputs Channel 1.Status__Data error;
+Slave 6.SSI Inputs Channel 1.Status__Frame error;
+Slave 6.SSI Inputs Channel 1.Status__Power failure;
+Slave 6.SSI Inputs Channel 1.Status__;
+Slave 6.SSI Inputs Channel 1.Status__Sync error;
+Slave 6.SSI Inputs Channel 1.Status__TxPDO State;
+Slave 6.SSI Inputs Channel 1.Status__TxPDO Toggle;
+Slave 6.SSI Inputs Channel 1.Counter value;
+Slave 6.SSI Inputs Channel 2.Status__Data error;
+Slave 6.SSI Inputs Channel 2.Status__Frame error;
+Slave 6.SSI Inputs Channel 2.Status__Power failure;
+Slave 6.SSI Inputs Channel 2.Status__;
+Slave 6.SSI Inputs Channel 2.Status__Sync error;
+Slave 6.SSI Inputs Channel 2.Status__TxPDO State;
+Slave 6.SSI Inputs Channel 2.Status__TxPDO Toggle;
+Slave 6.SSI Inputs Channel 2.Counter value;
+Slave 7.SYNC Inputs.Sync Mode;
+Slave 7.SYNC Inputs.__Alignment_2;
+Slave 7.SYNC Inputs.__Alignment_3;
+Slave 7.SYNC Inputs.TxPDO toggle;
+Slave 7.SYNC Inputs.TxPDO state;
+Slave 7.SYNC Inputs.Control value update toggle;
+Slave 7.SYNC Inputs.Timestamp update toggle;
+Slave 7.SYNC Inputs.External device not connected;
+)]]></Comment>
+					<Cmd>10</Cmd>
+					<Addr>69632</Addr>
+					<MaxErrors>5</MaxErrors>
+					<InputDefaultData>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</InputDefaultData>
+					<InputDefaultDataMask>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</InputDefaultDataMask>
+					<InputOffs>0</InputOffs>
+					<DataLength>52</DataLength>
+					<Cnt>7</Cnt>
+					<OwnerPhysAddr>1001</OwnerPhysAddr>
+					<OwnerPhysAddr>1002</OwnerPhysAddr>
+					<OwnerPhysAddr>1003</OwnerPhysAddr>
+					<OwnerPhysAddr>1004</OwnerPhysAddr>
+					<OwnerPhysAddr>1005</OwnerPhysAddr>
+					<OwnerPhysAddr>1006</OwnerPhysAddr>
+					<OwnerPhysAddr>1007</OwnerPhysAddr>
+				</Cmd>
+				<Cmd>
+					<State>SAFEOP</State>
+					<State>PREOP</State>
+					<State>OP</State>
+					<Comment><![CDATA[ LWR cmd (carried items:
+
+Slave 4.PTO Control Channel 1.Control__Frequency select;
+Slave 4.PTO Control Channel 1.Control__Disable ramp;
+Slave 4.PTO Control Channel 1.Control__Go counter;
+Slave 4.PTO Control Channel 1.Control__;
+Slave 4.PTO Control Channel 1.Frequency value;
+Slave 4.PTO Target Channel 1.Target counter value;
+Slave 4.PTO Control Channel 2.Control__Frequency select;
+Slave 4.PTO Control Channel 2.Control__Disable ramp;
+Slave 4.PTO Control Channel 2.Control__Go counter;
+Slave 4.PTO Control Channel 2.Control__;
+Slave 4.PTO Control Channel 2.Frequency value;
+Slave 4.PTO Target Channel 2.Target counter value;
+Slave 4.ENC Control Channel 1.Control__;
+Slave 4.ENC Control Channel 1.Control__Set counter;
+Slave 4.ENC Control Channel 1.Control__;
+Slave 4.ENC Control Channel 1.Control__Reserved;
+Slave 4.ENC Control Channel 1.Set counter value;
+Slave 4.ENC Control Channel 2.Control__;
+Slave 4.ENC Control Channel 2.Control__Set counter;
+Slave 4.ENC Control Channel 2.Control__;
+Slave 4.ENC Control Channel 2.Control__Reserved;
+Slave 4.ENC Control Channel 2.Set counter value;
+)]]></Comment>
+					<Cmd>11</Cmd>
+					<Addr>73728</Addr>
+					<MaxErrors>5</MaxErrors>
+					<OutputDefaultData>00000000000000000000000000000000000000000000000000000000</OutputDefaultData>
+					<OutputDefaultDataMask>00000000000000000000000000000000000000000000000000000000</OutputDefaultDataMask>
+					<OutputOffs>0</OutputOffs>
+					<DataLength>28</DataLength>
+					<Cnt>1</Cnt>
+					<OwnerPhysAddr>1004</OwnerPhysAddr>
+				</Cmd>
+				<Cmd>
+					<State>SAFEOP</State>
+					<State>PREOP</State>
+					<State>OP</State>
+					<Comment><![CDATA[ Read mailbox state (polling) cyclic command]]></Comment>
+					<Cmd>10</Cmd>
+					<Addr>4194304</Addr>
+					<InputOffs>52</InputOffs>
+					<DataLength>1</DataLength>
+					<Cnt>6</Cnt>
+					<OwnerPhysAddr>1002</OwnerPhysAddr>
+					<OwnerPhysAddr>1003</OwnerPhysAddr>
+					<OwnerPhysAddr>1004</OwnerPhysAddr>
+					<OwnerPhysAddr>1005</OwnerPhysAddr>
+					<OwnerPhysAddr>1006</OwnerPhysAddr>
+					<OwnerPhysAddr>1007</OwnerPhysAddr>
+				</Cmd>
+			</Frame>
+		</Cyclic>
+		<ProcessImage>
+			<Inputs>
+				<ByteSize>53</ByteSize>
+				<Variable slave_name="Slave 1">
+					<Name>Slave 1.ID.ID</Name>
+					<DataType>UINT</DataType>
+					<BitSize>16</BitSize>
+					<BitOffs>0</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 1.Status__Underrange</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>16</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 1.Status__Overrange</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>17</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 1.Status__Limit 1</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>2</BitSize>
+					<BitOffs>18</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 1.Status__Limit 2</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>2</BitSize>
+					<BitOffs>20</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 1.Status__Error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>22</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 1.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>23</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 1.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>5</BitSize>
+					<BitOffs>24</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 1.Status__Sync error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>29</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 1.Status__TxPDO State</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>30</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 1.Status__TxPDO Toggle</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>31</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 1.Value</Name>
+					<DataType>INT</DataType>
+					<BitSize>16</BitSize>
+					<BitOffs>32</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 2.Status__Underrange</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>48</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 2.Status__Overrange</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>49</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 2.Status__Limit 1</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>2</BitSize>
+					<BitOffs>50</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 2.Status__Limit 2</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>2</BitSize>
+					<BitOffs>52</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 2.Status__Error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>54</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 2.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>55</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 2.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>5</BitSize>
+					<BitOffs>56</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 2.Status__Sync error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>61</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 2.Status__TxPDO State</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>62</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 2.Status__TxPDO Toggle</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>63</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 2">
+					<Name>Slave 2.AI Standard Channel 2.Value</Name>
+					<DataType>INT</DataType>
+					<BitSize>16</BitSize>
+					<BitOffs>64</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 3">
+					<Name>Slave 3.DeviceState Inputs Device.__Alignment_1</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>8</BitSize>
+					<BitOffs>80</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 3">
+					<Name>Slave 3.DeviceState Inputs Device.__Alignment_2</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>4</BitSize>
+					<BitOffs>88</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 3">
+					<Name>Slave 3.DeviceState Inputs Device.Device Diag</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>92</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 3">
+					<Name>Slave 3.DeviceState Inputs Device.__Alignment_4</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>2</BitSize>
+					<BitOffs>93</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 3">
+					<Name>Slave 3.DeviceState Inputs Device.Device State</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>95</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 3">
+					<Name>Slave 3.DeviceState Inputs.State Ch1</Name>
+					<DataType>USINT</DataType>
+					<BitSize>8</BitSize>
+					<BitOffs>96</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 3">
+					<Name>Slave 3.DeviceState Inputs.State Ch2</Name>
+					<DataType>USINT</DataType>
+					<BitSize>8</BitSize>
+					<BitOffs>104</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 3">
+					<Name>Slave 3.DeviceState Inputs.State Ch3</Name>
+					<DataType>USINT</DataType>
+					<BitSize>8</BitSize>
+					<BitOffs>112</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 3">
+					<Name>Slave 3.DeviceState Inputs.State Ch4</Name>
+					<DataType>USINT</DataType>
+					<BitSize>8</BitSize>
+					<BitOffs>120</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 1.Status__Sel. Ack/End counter</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>128</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 1.Status__Ramp active</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>129</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 1.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>4</BitSize>
+					<BitOffs>130</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 1.Status__Error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>134</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 1.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>6</BitSize>
+					<BitOffs>135</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 1.Status__Sync error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>141</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 1.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>142</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 1.Status__TxPDO Toggle</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>143</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 2.Status__Sel. Ack/End counter</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>144</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 2.Status__Ramp active</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>145</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 2.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>4</BitSize>
+					<BitOffs>146</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 2.Status__Error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>150</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 2.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>6</BitSize>
+					<BitOffs>151</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 2.Status__Sync error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>157</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 2.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>158</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Status Channel 2.Status__TxPDO Toggle</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>159</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 1.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>2</BitSize>
+					<BitOffs>160</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 1.Status__Set counter done</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>162</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 1.Status__Counter underflow</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>163</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 1.Status__Counter overflow</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>164</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 1.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>8</BitSize>
+					<BitOffs>165</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 1.Status__Sync error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>173</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 1.Status__TxPDO State</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>174</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 1.Status__TxPDO Toggle</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>175</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 1.Counter value</Name>
+					<DataType>UDINT</DataType>
+					<BitSize>32</BitSize>
+					<BitOffs>176</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 2.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>2</BitSize>
+					<BitOffs>208</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 2.Status__Set counter done</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>210</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 2.Status__Counter underflow</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>211</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 2.Status__Counter overflow</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>212</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 2.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>8</BitSize>
+					<BitOffs>213</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 2.Status__Sync error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>221</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 2.Status__TxPDO State</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>222</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 2.Status__TxPDO Toggle</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>223</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Status Channel 2.Counter value</Name>
+					<DataType>UDINT</DataType>
+					<BitSize>32</BitSize>
+					<BitOffs>224</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 5">
+					<Name>Slave 5.Channel 1.Status</Name>
+					<DataType>USINT</DataType>
+					<BitSize>8</BitSize>
+					<BitOffs>256</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 5">
+					<Name>Slave 5.Channel 1.Value</Name>
+					<DataType>INT</DataType>
+					<BitSize>16</BitSize>
+					<BitOffs>264</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 5">
+					<Name>Slave 5.Channel 2.Status</Name>
+					<DataType>USINT</DataType>
+					<BitSize>8</BitSize>
+					<BitOffs>280</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 5">
+					<Name>Slave 5.Channel 2.Value</Name>
+					<DataType>INT</DataType>
+					<BitSize>16</BitSize>
+					<BitOffs>288</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 1.Status__Data error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>304</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 1.Status__Frame error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>305</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 1.Status__Power failure</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>306</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 1.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>10</BitSize>
+					<BitOffs>307</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 1.Status__Sync error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>317</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 1.Status__TxPDO State</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>318</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 1.Status__TxPDO Toggle</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>319</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 1.Counter value</Name>
+					<DataType>UDINT</DataType>
+					<BitSize>32</BitSize>
+					<BitOffs>320</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 2.Status__Data error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>352</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 2.Status__Frame error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>353</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 2.Status__Power failure</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>354</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 2.Status__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>10</BitSize>
+					<BitOffs>355</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 2.Status__Sync error</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>365</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 2.Status__TxPDO State</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>366</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 2.Status__TxPDO Toggle</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>367</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 6">
+					<Name>Slave 6.SSI Inputs Channel 2.Counter value</Name>
+					<DataType>UDINT</DataType>
+					<BitSize>32</BitSize>
+					<BitOffs>368</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 7">
+					<Name>Slave 7.SYNC Inputs.Sync Mode</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>2</BitSize>
+					<BitOffs>400</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 7">
+					<Name>Slave 7.SYNC Inputs.__Alignment_2</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>6</BitSize>
+					<BitOffs>402</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 7">
+					<Name>Slave 7.SYNC Inputs.__Alignment_3</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>3</BitSize>
+					<BitOffs>408</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 7">
+					<Name>Slave 7.SYNC Inputs.TxPDO toggle</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>411</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 7">
+					<Name>Slave 7.SYNC Inputs.TxPDO state</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>412</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 7">
+					<Name>Slave 7.SYNC Inputs.Control value update toggle</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>413</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 7">
+					<Name>Slave 7.SYNC Inputs.Timestamp update toggle</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>414</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 7">
+					<Name>Slave 7.SYNC Inputs.External device not connected</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>415</BitOffs>
+				</Variable>
+			</Inputs>
+			<Outputs>
+				<ByteSize>28</ByteSize>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Control Channel 1.Control__Frequency select</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>0</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Control Channel 1.Control__Disable ramp</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>1</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Control Channel 1.Control__Go counter</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>2</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Control Channel 1.Control__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>13</BitSize>
+					<BitOffs>3</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Control Channel 1.Frequency value</Name>
+					<DataType>UINT</DataType>
+					<BitSize>16</BitSize>
+					<BitOffs>16</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Target Channel 1.Target counter value</Name>
+					<DataType>UDINT</DataType>
+					<BitSize>32</BitSize>
+					<BitOffs>32</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Control Channel 2.Control__Frequency select</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>64</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Control Channel 2.Control__Disable ramp</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>65</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Control Channel 2.Control__Go counter</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>66</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Control Channel 2.Control__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>13</BitSize>
+					<BitOffs>67</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Control Channel 2.Frequency value</Name>
+					<DataType>UINT</DataType>
+					<BitSize>16</BitSize>
+					<BitOffs>80</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.PTO Target Channel 2.Target counter value</Name>
+					<DataType>UDINT</DataType>
+					<BitSize>32</BitSize>
+					<BitOffs>96</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Control Channel 1.Control__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>2</BitSize>
+					<BitOffs>128</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Control Channel 1.Control__Set counter</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>130</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Control Channel 1.Control__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>12</BitSize>
+					<BitOffs>131</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Control Channel 1.Control__Reserved</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>143</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Control Channel 1.Set counter value</Name>
+					<DataType>UDINT</DataType>
+					<BitSize>32</BitSize>
+					<BitOffs>144</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Control Channel 2.Control__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>2</BitSize>
+					<BitOffs>176</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Control Channel 2.Control__Set counter</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>178</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Control Channel 2.Control__</Name>
+					<DataType>BITARR</DataType>
+					<BitSize>12</BitSize>
+					<BitOffs>179</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Control Channel 2.Control__Reserved</Name>
+					<DataType>BOOL</DataType>
+					<BitSize>1</BitSize>
+					<BitOffs>191</BitOffs>
+				</Variable>
+				<Variable slave_name="Slave 4">
+					<Name>Slave 4.ENC Control Channel 2.Set counter value</Name>
+					<DataType>UDINT</DataType>
+					<BitSize>32</BitSize>
+					<BitOffs>192</BitOffs>
+				</Variable>
+			</Outputs>
+		</ProcessImage>
+		<ExternalDrivers />
+	</Config>
+</EtherCATConfig>

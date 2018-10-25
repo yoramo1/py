@@ -5,6 +5,7 @@ from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 import xml.etree 
 
 import YoUtil
+from ECatSlave import ECatSlave as Slave
 
 #Usage:
 #c:\TestDev\py>py ECatConfigUtil.py "C:\Users\yoramo\Documents\Elmo Application Studio\Workspaces\Ws3\Targets\P01\Resources\Config.xml" g01
@@ -13,14 +14,42 @@ import YoUtil
 def Main():
 	print("ECatConfigUtil -> ")
 	YoUtil.print_list(sys.argv,1)
-	if len(sys.argv)>1:
-		cfg = Config(sys.argv[1])
+	numofParams = len(sys.argv)
+	if numofParams > 1:
+		cmd = sys.argv[1].lower()
+		command_options = {
+		'slaves' : cmd_slave_list,
+		
+		}
+		
+		if cmd in command_options.keys():
+			command_options[cmd]()
+		else:
+			print_usage(cmd)
+	else:
+		print_usage()
+		
+	
+def print_usage(cmd=None):
+	if cmd!= None:
+		print('None valid Command option: ',cmd)
+	print('ECatConfigUtil Usage:')
+	print('PY ECatConfigUtil.py <cmd> <cfgFile> <param2> <param3>')
+	print('	cmd - slaves  <cfg_file> - list the slaves in the config')
+	
+def cmd_slave_list():
+	if len(sys.argv) >= 3:
+		cfg = Config(sys.argv[2])
 		cfg.load_config()
-		print('ResID = ',cfg.get_resid())
-		print('Slaves: ')
-		YoUtil.print_list(cfg.get_slaves(),1)
-		if len(sys.argv) >= 2:
-			cfg.decode_slave_InitCmds(sys.argv[2])
+		lst = cfg.get_slaves()
+		YoUtil.print_list(lst,1)
+	else:
+		print_usage()
+	
+	
+	
+	
+	
 	
 class Config:
 	def __init__(self,path):
@@ -45,19 +74,8 @@ class Config:
 		#print('>>',len(xml_list))
 		if xml_list != None:
 			for xml_slave in xml_list:
-				slave_name = None
-				slave_name2 = None
-				slave_ProductName = None
-				xml_nameInres = xml_slave.find('Info/NameInResource')
-				if xml_nameInres != None:
-					slave_name = xml_nameInres.text
-				xml_name = xml_slave.find('Info/Name')
-				if xml_name != None:
-					slave_name2 = xml_name.text
-				xml_ProductName = xml_slave.find('Info/ProductName')
-				if xml_ProductName != None:
-					slave_ProductName = xml_ProductName.text
-				ret.append((slave_name,slave_name2,slave_ProductName))
+				slave = Slave(xml_slave)
+				ret.append(slave)	
 		return ret			
 	
 	def get_xml_slave_by_name(self, slave_Name):
