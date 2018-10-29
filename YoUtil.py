@@ -127,7 +127,14 @@ def list_to_comma_separated(lst):
 			ret+=','+t
 	return ret
 
-
+def get_indent(indent):
+	ret=''
+	i = 0
+	while i< indent:
+		ret+='   '
+		i+=1
+	return ret
+	
 if (__name__=='__main__'):
 	Main()
 	

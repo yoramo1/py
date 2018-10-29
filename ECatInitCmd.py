@@ -39,11 +39,11 @@ class ECatInitCmd:
 		if xml_Data!=None:
 			self.Data = xml_Data.text
 			
-	def tostring(self):
+	def tostring(self,indent=0):
 		if self.Ado!=None:
-			ret = '      InitCmd Ado,Adp=(0x%4.4x,0x%4.4x) [%s] - "%s" - Data=[%s]'%(self.Ado,self.Adp,self.get_transitions(),self.Comment,self.Data) + '\n'
+			ret = YoUtil.get_indent(indent)+ 'InitCmd Ado,Adp=(0x%4.4x,0x%4.4x) [%s] - "%s" - Data=[%s]'%(self.Ado,self.Adp,self.get_transitions(),self.Comment,self.Data) + '\n'
 		elif self.Index!=None:
-			ret = '      InitCmd  Index=(0x%4.4x,0x%4.4x) [%s] - "%s" - Data=[%s]'%(self.Index,self.SubIndex,self.get_transitions(),self.Comment,self.Data) + '\n'
+			ret = YoUtil.get_indent(indent)+'InitCmd  Index=(0x%4.4x.%d) [%s] - "%s" - Data=[%s]'%(self.Index,self.SubIndex,self.get_transitions(),self.Comment,self.Data) + '\n'
 		return ret
 		
 	def get_transitions(self):

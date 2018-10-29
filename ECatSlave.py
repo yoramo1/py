@@ -60,14 +60,14 @@ class ECatSlave:
 		if xml_dc!=None:
 			pass
 		
-	def tostring(self, type):
+	def tostring(self, type,indent=0):
 		ret = ("Slave (%s,%s, (%8x,%8x,%8x) -> %s) " % (self.name_in_res, self.device_name,self.vendor_id,self.productCode,self.revisionNo,self.ProductName))
 		if self.Mailbox!= None:
-			ret+='\n'+self.Mailbox.tostring()
+			ret+='\n'+self.Mailbox.tostring(indent+1)
 		if type >=1:
-			ret += ("\n   InitCmds count= %d" % (len(self.InitCmds)))+'\n'
+			ret += ("\n%sInitCmds count= %d" % (YoUtil.get_indent(indent+1),len(self.InitCmds)))+'\n'
 			for initCmd in self.InitCmds:
-				str = initCmd.tostring()
+				str = initCmd.tostring(indent+2)
 				ret +=(str)
 		return ret
 		

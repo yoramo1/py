@@ -26,12 +26,12 @@ class ECatMailbox:
 				self.CoE.append(initcmd)
 
 	
-	def tostring(self):
-		ret = '   Mailbox Protocols: '
+	def tostring(self,ident=0):
+		ret = YoUtil.get_indent(ident) + 'Mailbox Protocols: '
 		ret += YoUtil.list_to_comma_separated(self.Protocols) +' '
 		if self.CoE != None:
 			ret += ("\n   InitCmds count= %d" % (len(self.CoE)))+'\n'
 			for initCmd in self.CoE:
-				str = initCmd.tostring()
+				str = initCmd.tostring(ident+1)
 				ret +=(str)
 		return ret
