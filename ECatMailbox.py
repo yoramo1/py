@@ -3,7 +3,7 @@ from xml.etree.ElementTree import ElementTree as ET
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 import YoUtil
 from ECatInitCmd import ECatInitCmd as InitCmd
-
+from operator import itemgetter, attrgetter
 
 
 class ECatMailbox:
@@ -30,8 +30,9 @@ class ECatMailbox:
 		ret = YoUtil.get_indent(ident) + 'Mailbox Protocols: '
 		ret += YoUtil.list_to_comma_separated(self.Protocols) +' '
 		if self.CoE != None:
-			ret += ("\n   InitCmds count= %d" % (len(self.CoE)))+'\n'
+			self.CoE=sorted(self.CoE,key=attrgetter('Index'))
+			ret += ("\n%sCoE InitCmds count= %d" % (YoUtil.get_indent(ident+1),len(self.CoE)))+'\n'
 			for initCmd in self.CoE:
-				str = initCmd.tostring(ident+1)
+				str = initCmd.tostring(ident+2)
 				ret +=(str)
 		return ret
