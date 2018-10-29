@@ -5,7 +5,7 @@ import ECatConfigUtil
 
 def Main():
 	print("ECatUtil -> ")
-	YoUtil.print_list(sys.argv,1)
+	#YoUtil.print_list(sys.argv,1)
 	numofParams = len(sys.argv)
 	if numofParams > 1:
 		cmd = sys.argv[1].lower()
@@ -34,9 +34,11 @@ def cmd_slave_list_in_cfg():
 	if len(sys.argv) >= 3:
 		cfg = ECatConfigUtil.Config(sys.argv[2])
 		cfg.load_config()
-		lst = cfg.get_slaves()
-		for s in lst:
-			s.print(1)
+		slave_list = cfg.get_slaves()
+		str = ''
+		for s in slave_list:
+			str += s.tostring(1)
+		print(str)
 	else:
 		print_usage()
 

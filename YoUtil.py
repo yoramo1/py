@@ -117,6 +117,16 @@ def get_int(str):
 	
 def debug_print(text,lst):
 	print('>>',text,lst)
+	
+def list_to_comma_separated(lst):
+	ret = ''
+	for t in lst:
+		if len(ret)==0:
+			ret+= t
+		else:
+			ret+=','+t
+	return ret
+
 
 if (__name__=='__main__'):
 	Main()
