@@ -12,17 +12,12 @@ class ECatSlave:
 	pass
 	
 	def __init__(self,xml_slave):
-		self.name_in_res = None
-		self.device_name = None
-		self.ProductName = None
-		self.vendor_id = None
-		self.productCode = None
-		self.revisionNo = None
 		self.InitCmds = list()
 		self.Mailbox = None
 		self.DC = None
 		
-		self.name = YoUtil.get_xml_node_as_text(xml_slave,'Info/NameInResource')
+		
+		self.name_in_res = YoUtil.get_xml_node_as_text(xml_slave,'Info/NameInResource')
 		self.device_name = YoUtil.get_xml_node_as_text(xml_slave,'Info/Name')
 		self.ProductName = YoUtil.get_xml_node_as_text(xml_slave,'Info/ProductName')
 		self.vendor_id = YoUtil.get_xml_node_as_int(xml_slave,'Info/VendorId')
