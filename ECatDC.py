@@ -15,5 +15,5 @@ class ECatDC:
 
 		
 	def tostring(self,indent=0):
-		ret = YoUtil.get_indent(indent)+'DC -'+'ReferenceClock='+str(self.ReferenceClock)+' CycleTime0='+str(self.CycleTime0)+' CycleTime1='+str(self.CycleTime1)+' ShiftTime='+str(self.ShiftTime)+'\n'
+		ret = YoUtil.get_indent(indent)+'DC -'+'ReferenceClock='+str(self.ReferenceClock)+' CycleTime0='+str(self.CycleTime0)+' CycleTime1='+str(self.CycleTime1)+' ShiftTime='+str(self.ShiftTime)
 		return ret
