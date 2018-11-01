@@ -123,6 +123,14 @@ def get_xml_node_as_int(xml_node,xpath_str):
 			ret = get_int(xml_find_node.text)
 	return ret
 	
+def get_xml_node_as_text(xml_node,xpath_str):
+	ret = None
+	if xml_node!= None:
+		xml_find_node = xml_node.find(xpath_str)
+		if xml_find_node != None:
+			ret = xml_find_node.text
+	return ret
+	
 def debug_print(text,lst):
 	print('>>',text,lst)
 	

@@ -22,25 +22,13 @@ class ECatSlave:
 		self.Mailbox = None
 		self.DC = None
 		
-		xml_nameInres = xml_slave.find('Info/NameInResource')
-		if xml_nameInres != None:
-			self.name_in_res = xml_nameInres.text
-		xml_name = xml_slave.find('Info/Name')
-		if xml_name != None:
-			self.device_name = xml_name.text
-		xml_ProductName = xml_slave.find('Info/ProductName')
-		if xml_ProductName != None:
-			self.ProductName = xml_ProductName.text
-		xml_vendor_id = xml_slave.find('Info/VendorId')
-		if xml_vendor_id!=None:
-			self.vendor_id = YoUtil.get_int(xml_vendor_id.text)
-		xml_productCode = xml_slave.find('Info/ProductCode')
-		if xml_productCode!=None:
-			self.productCode = YoUtil.get_int(xml_productCode.text)
-		xml_revisionNo = xml_slave.find('Info/RevisionNo')
-		if xml_revisionNo!=None:
-			self.revisionNo = YoUtil.get_int(xml_revisionNo.text)
-				
+		self.name = YoUtil.get_xml_node_as_text(xml_slave,'Info/NameInResource')
+		self.device_name = YoUtil.get_xml_node_as_text(xml_slave,'Info/Name')
+		self.ProductName = YoUtil.get_xml_node_as_text(xml_slave,'Info/ProductName')
+		self.vendor_id = YoUtil.get_xml_node_as_int(xml_slave,'Info/VendorId')
+		self.productCode = YoUtil.get_xml_node_as_int(xml_slave,'Info/ProductCode')
+		self.revisionNo = YoUtil.get_xml_node_as_int(xml_slave,'Info/RevisionNo')
+		
 		self.load_initCmds(xml_slave)
 		self.load_mailbox(xml_slave)
 		self.load_DC(xml_slave)
