@@ -64,11 +64,11 @@ class ECatSlave:
 			self.DC = DC(xml_dc)
 		
 	def tostring(self, type,indent=0):
-		ret = ("Slave (%s,%s, (%8x,%8x,%8x) -> %s) " % (self.name_in_res, self.device_name,self.vendor_id,self.productCode,self.revisionNo,self.ProductName))
+		ret = ("Slave (%s,%s, (%8x,%8x,%8x) -> %s) " % (self.name_in_res, self.device_name,self.vendor_id,self.productCode,self.revisionNo,self.ProductName))+'\n'
 		if self.DC != None:
 			ret+= self.DC.tostring(indent+1)
 		if self.Mailbox!= None:
-			ret+='\n'+self.Mailbox.tostring(indent+1)
+			ret+=self.Mailbox.tostring(indent+1)
 		if type >=1:
 			ret += ("%sInitCmds count= %d" % (YoUtil.get_indent(indent+1),len(self.InitCmds)))+'\n'
 			self.InitCmds=sorted(self.InitCmds,key=attrgetter('Ado'))
