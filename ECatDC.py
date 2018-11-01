@@ -8,24 +8,10 @@ class ECatDC:
 	pass
 	
 	def __init__(self,xml_dc):
-		self.ReferenceClock = None
-		self.CycleTime0 = None
-		self.CycleTime1 = None
-		self.ShiftTime= None
-		
-		xml_ReferenceClock = xml_dc.find('ReferenceClock')
-		if xml_ReferenceClock != None:
-			self.ReferenceClock = YoUtil.get_int(xml_ReferenceClock.text)
-		
-		xml_CycleTime0 = xml_dc.find('CycleTime0')
-		if xml_CycleTime0 != None:
-			self.CycleTime0 = YoUtil.get_int(xml_CycleTime0.text)
-		xml_CycleTime1 = xml_dc.find('CycleTime1')
-		if xml_CycleTime1 != None:
-			self.CycleTime1 = YoUtil.get_int(xml_CycleTime1.text)
-		xml_ShiftTime = xml_dc.find('ShiftTime')
-		if xml_ShiftTime != None:
-			self.ShiftTime = YoUtil.get_int(xml_ShiftTime.text)
+		self.ReferenceClock = YoUtil.get_xml_node_as_int(xml_dc,'ReferenceClock')
+		self.CycleTime0 = YoUtil.get_xml_node_as_int(xml_dc,'CycleTime0')
+		self.CycleTime1 = YoUtil.get_xml_node_as_int(xml_dc,'CycleTime1')
+		self.ShiftTime = YoUtil.get_xml_node_as_int(xml_dc,'ShiftTime')
 
 		
 	def tostring(self,indent=0):
