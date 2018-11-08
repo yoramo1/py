@@ -1,5 +1,7 @@
 import sys
 import os
+import random
+import string
 from xml.etree.ElementTree import ElementTree as ET
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 import xml.etree 
@@ -151,6 +153,18 @@ def get_indent(indent):
 		i+=1
 	return ret
 	
+def get_rand_pass():
+	allchar = string.ascii_letters + string.punctuation + string.digits
+	min_char=8
+	max_char=12
+	range_of_nums = range(random.randint(min_char,max_char))
+	print(range_of_nums)
+	ret = "".join(random.choice(allchar) for x in range_of_nums)
+	return ret
+	
+
+	
 if (__name__=='__main__'):
-	Main()
+	print(get_rand_pass())
+	#Main()
 	

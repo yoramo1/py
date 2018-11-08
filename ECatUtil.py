@@ -11,6 +11,7 @@ def Main():
 		cmd = sys.argv[1].lower()
 		command_options = {
 		'cfg_slaves' : cmd_slave_list_in_cfg,
+		'cfg_slave_names': cmd_slave_name_in_cfg
 		
 		}
 		if cmd is None:
@@ -42,7 +43,15 @@ def cmd_slave_list_in_cfg():
 	else:
 		print_usage()
 
-		
+def cmd_slave_name_in_cfg():
+	if len(sys.argv) >= 3:
+		cfg = ECatConfigUtil.Config(sys.argv[2])
+		cfg.load_config()
+		slave_list = cfg.get_slaves_names()
+		print(slave_list)
+	else:
+		print_usage()
+	
 		
 if (__name__=='__main__'):
 	Main()

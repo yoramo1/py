@@ -19,7 +19,7 @@ def Main():
 		cmd = sys.argv[1].lower()
 		command_options = {
 		'slaves' : cmd_slave_list,
-		
+		'full' : cmd_load_config_full,
 		}
 		
 		if cmd in command_options.keys():
@@ -36,8 +36,18 @@ def print_usage(cmd=None):
 	print('ECatConfigUtil Usage:')
 	print('PY ECatConfigUtil.py <cmd> <cfgFile> <param2> <param3>')
 	print('	cmd - slaves  <cfg_file> - list the slaves in the config')
+	print('	cmd - full  <cfg_file> - ')
 	
 def cmd_slave_list():
+	if len(sys.argv) >= 3:
+		cfg = Config(sys.argv[2])
+		cfg.load_config()
+		lst = cfg.get_slaves()
+		YoUtil.print_list(lst,1)
+	else:
+		print_usage()
+		
+def cmd_load_config_full():
 	if len(sys.argv) >= 3:
 		cfg = Config(sys.argv[2])
 		cfg.load_config()
@@ -76,6 +86,16 @@ class Config:
 			for xml_slave in xml_list:
 				slave = Slave(xml_slave)
 				ret.append(slave)	
+		return ret			
+		
+	def get_slaves_names(self):
+		ret = list()
+		xml_list = self.tree.findall('Config/Slave')
+		#print('>>',len(xml_list))
+		if xml_list != None:
+			for xml_slave in xml_list:
+				slave = Slave(xml_slave)
+				ret.append(slave.device_name)	
 		return ret			
 	
 	def get_xml_slave_by_name(self, slave_Name):
