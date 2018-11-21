@@ -51,14 +51,15 @@ class ECatSlave:
 			self.DC = DC(xml_dc)
 		
 	def tostring(self, type,indent=0):
-		ret = ("Slave (%s,%s, (%8x,%8x,%8x) -> %s) " % (self.name_in_res, self.device_name,self.vendor_id,self.productCode,self.revisionNo,self.ProductName))+'\n'
+		ret = ("Slave ('%s','%s', (0x%x,0x%x,0x%x) -> '%s') " % (YoUtil.str_strip(self.name_in_res), YoUtil.str_strip(self.device_name),self.vendor_id,self.productCode,self.revisionNo,YoUtil.str_strip(self.ProductName)))+'\n'
 		ret+=YoUtil.get_indent(indent+1)+'ProcessData '
 		if self.ProcessData_Send_BitStart!= None:
 			ret+= ('Send BitStart=%d, BitLength=%d'% (self.ProcessData_Send_BitStart,self.ProcessData_Send_BitLength))
 		if self.ProcessData_Recv_BitStart!= None:
 			ret+= (', Recv BitStart=%d, BitLength=%d'% (self.ProcessData_Recv_BitStart,self.ProcessData_Recv_BitLength))
+		ret+='\n'
 		if self.DC != None:
-			ret+= '\n'+self.DC.tostring(indent+1)
+			ret+= self.DC.tostring(indent+1)
 		if self.Mailbox!= None:
 			ret+='\n'+self.Mailbox.tostring(indent+1)
 		if type >=1:

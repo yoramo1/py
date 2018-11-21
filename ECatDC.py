@@ -8,7 +8,7 @@ class ECatDC:
 	pass
 	
 	def __init__(self,xml_dc):
-		self.ReferenceClock = YoUtil.get_xml_node_as_int(xml_dc,'ReferenceClock')
+		self.ReferenceClock = YoUtil.get_xml_node_as_bool(xml_dc,'ReferenceClock')
 		self.CycleTime0 = YoUtil.get_xml_node_as_int(xml_dc,'CycleTime0')
 		self.CycleTime1 = YoUtil.get_xml_node_as_int(xml_dc,'CycleTime1')
 		self.ShiftTime = YoUtil.get_xml_node_as_int(xml_dc,'ShiftTime')

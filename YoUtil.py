@@ -125,6 +125,18 @@ def get_xml_node_as_int(xml_node,xpath_str):
 			ret = get_int(xml_find_node.text)
 	return ret
 	
+def get_xml_node_as_bool(xml_node,xpath_str):
+	ret = None
+	if xml_node!= None:
+		xml_find_node = xml_node.find(xpath_str)
+		if xml_find_node != None:
+			val = xml_find_node.text.lower()
+			if  val =='true' or val == '1':
+				ret = True
+			elif val =='false' or val == '0':
+				ret = False
+	return ret
+	
 def get_xml_node_as_text(xml_node,xpath_str):
 	ret = None
 	if xml_node!= None:
@@ -162,6 +174,12 @@ def get_rand_pass():
 	ret = "".join(random.choice(allchar) for x in range_of_nums)
 	return ret
 	
+def str_strip(str):
+	if str:
+		str = str.replace('\r', '').replace('\n', '').strip()
+	if not str:
+		str=''
+	return str
 
 	
 if (__name__=='__main__'):
