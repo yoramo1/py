@@ -15,6 +15,7 @@ class ECatInitCmd:
 		self.SubIndex=None
 		self.Data=None
 		self.Cnt=None
+		self.CompleteAccess=None
 		
 		xml_transitions = xml_initCmd.findall('Transition')
 		for xml_transition in  xml_transitions:
@@ -48,11 +49,14 @@ class ECatInitCmd:
 		if xml_Cnt!=None:
 			self.Cnt = xml_Cnt.text
 			
+		if 'CompleteAccess' in xml_initCmd.attrib:
+			self.CompleteAccess = xml_initCmd.attrib['CompleteAccess']
+	
 	def tostring(self,indent=0):
 		if self.Ado!=None:
-			ret = YoUtil.get_indent(indent)+ 'InitCmd Ado,Adp=(0x%4.4x,0x%4.4x) [%s] - "%s" - Data=[%s] Cnt=[%s] Cmd=[%s]'%(self.Ado,self.Adp,self.get_transitions(),YoUtil.str_strip(self.Comment),self.Data,YoUtil.str_strip(self.Cnt),YoUtil.str_strip(self.Cmd)) + '\n'
+			ret = YoUtil.get_indent(indent)+ 'InitCmd Ado,Adp=(0x%4.4x,0x%4.4x) [%s] - "%s" - Data=[%s] Cnt=[%s] Cmd=[%s] CompleteAccess=[%s]'%(self.Ado,self.Adp,self.get_transitions(),YoUtil.str_strip(self.Comment),self.Data,YoUtil.str_strip(self.Cnt),YoUtil.str_strip(self.Cmd),YoUtil.str_strip(self.CompleteAccess)) + '\n'
 		elif self.Index!=None:
-			ret = YoUtil.get_indent(indent)+ 'InitCmd Index=(0x%4.4x.%d) [%s] - "%s" - Data=[%s] Cnt=[%s] Cmd=[%s]' %(self.Index,self.SubIndex,self.get_transitions(),YoUtil.str_strip(self.Comment),self.Data,YoUtil.str_strip(self.Cnt),YoUtil.str_strip(self.Cmd)) + '\n'
+			ret = YoUtil.get_indent(indent)+ 'InitCmd Index=(0x%4.4x.%d) [%s] - "%s" - Data=[%s] Cnt=[%s] Cmd=[%s] CompleteAccess=[%s]' %(self.Index,self.SubIndex,self.get_transitions(),YoUtil.str_strip(self.Comment),self.Data,YoUtil.str_strip(self.Cnt),YoUtil.str_strip(self.Cmd),YoUtil.str_strip(self.CompleteAccess)) + '\n'
 		return ret
 		
 	def get_transitions(self):

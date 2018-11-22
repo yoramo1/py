@@ -6,6 +6,7 @@ import xml.etree
 
 import YoUtil
 from ECatSlave import ECatSlave as Slave
+from ECatMaster import ECatMaster as Master
 
 #Usage:
 #c:\TestDev\py>py ECatConfigUtil.py "C:\Users\yoramo\Documents\Elmo Application Studio\Workspaces\Ws3\Targets\P01\Resources\Config.xml" g01
@@ -51,7 +52,8 @@ def cmd_load_config_full():
 	if len(sys.argv) >= 3:
 		cfg = Config(sys.argv[2])
 		cfg.load_config()
-		lst = cfg.get_slaves()
+		master = cfg.get_master()
+		lst += cfg.get_slaves()
 		YoUtil.print_list(lst,1)
 	else:
 		print_usage()
@@ -88,6 +90,13 @@ class Config:
 				ret.append(slave)	
 		return ret			
 		
+	def get_master(self):
+		master = None
+		xml_master = self.tree.find('Config/Master')
+		if xml_master!= None:
+			master = Master(xml_master)
+		return master
+
 	def get_slaves_names(self):
 		ret = list()
 		xml_list = self.tree.findall('Config/Slave')
@@ -127,6 +136,7 @@ class Config:
 			# get the list of mailbox\CoE\InitCmds
 			# build the list 
 		return ret
+		
 		
 	
 if (__name__=='__main__'):

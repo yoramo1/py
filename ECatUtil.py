@@ -11,8 +11,8 @@ def Main():
 		cmd = sys.argv[1].lower()
 		command_options = {
 		'cfg_slaves' : cmd_slave_list_in_cfg,
-		'cfg_slave_names': cmd_slave_name_in_cfg
-		
+		'cfg_slave_names': cmd_slave_name_in_cfg,
+		'cfg_full' : cmd_cfg_full,
 		}
 		if cmd is None:
 			print_usage()
@@ -30,6 +30,7 @@ def print_usage(cmd=None):
 	if cmd!= None:
 		print('None valid Command option: ',cmd)
 	print('  py ECatUtil cfg_slaves <file> - display the list of slaves in a config file')
+	print('  py ECatUtil cfg_full <file> - display a full config display')
 	
 def cmd_slave_list_in_cfg():
 	if len(sys.argv) >= 3:
@@ -37,6 +38,21 @@ def cmd_slave_list_in_cfg():
 		cfg.load_config()
 		slave_list = cfg.get_slaves()
 		str = ''
+		for s in slave_list:
+			str += s.tostring(1)
+		print(str)
+	else:
+		print_usage()
+		
+def cmd_cfg_full():
+	if len(sys.argv) >= 3:
+		cfg = ECatConfigUtil.Config(sys.argv[2])
+		cfg.load_config()
+		master = cfg.get_master();
+		slave_list = cfg.get_slaves()
+		str = ''
+		if master!=None:
+			str += master.tostring(1)
 		for s in slave_list:
 			str += s.tostring(1)
 		print(str)
