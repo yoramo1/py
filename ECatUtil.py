@@ -1,7 +1,7 @@
 import sys
 import YoUtil
 import ECatConfigUtil
-
+from YoUtil import ecat_excel_util as excel
 
 def Main():
 	print("ECatUtil -> ")
@@ -13,6 +13,7 @@ def Main():
 		'cfg_slaves' : cmd_slave_list_in_cfg,
 		'cfg_slave_names': cmd_slave_name_in_cfg,
 		'cfg_full' : cmd_cfg_full,
+		'cfg_xslt_initcmd': cmd_cfg_xslt_initcmd,
 		}
 		if cmd is None:
 			print_usage()
@@ -31,6 +32,7 @@ def print_usage(cmd=None):
 		print('None valid Command option: ',cmd)
 	print('  py ECatUtil cfg_slaves <file> - display the list of slaves in a config file')
 	print('  py ECatUtil cfg_full <file> - display a full config display')
+	print('  py ECatUtil cfg_xslt_initcmd <file> <excel_file>- build a excel filles with all InitCmd')
 	
 def cmd_slave_list_in_cfg():
 	if len(sys.argv) >= 3:
@@ -58,6 +60,25 @@ def cmd_cfg_full():
 		print(str)
 	else:
 		print_usage()
+		
+def cmd_cfg_xslt_initcmd():
+	if len(sys.argv) >= 4:
+		cfg = ECatConfigUtil.Config(sys.argv[2])
+		cfg.load_config()
+		master = cfg.get_master();
+		slave_list = cfg.get_slaves()
+		xlsx = excel()
+		xlsx.create_file(sys.argv[3])
+		num=0
+		for s in slave_list:
+			name = s.name_in_res
+			if name is None:
+				name = 'Slave '+str(num)
+			xlsx.append_slave_initCmd(s,name)
+			num+=1
+		xlsx.close()
+	else:
+		print_usage()
 
 def cmd_slave_name_in_cfg():
 	if len(sys.argv) >= 3:
@@ -68,6 +89,7 @@ def cmd_slave_name_in_cfg():
 	else:
 		print_usage()
 	
+
 		
 if (__name__=='__main__'):
 	Main()

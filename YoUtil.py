@@ -5,6 +5,7 @@ import string
 from xml.etree.ElementTree import ElementTree as ET
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 import xml.etree 
+import xlsxwriter
 
 # usfull links:
 # https://docs.python.org/3.7/library/stdtypes.html
@@ -182,6 +183,52 @@ def str_strip(str):
 	return str
 
 	
+class ecat_excel_util:
+	pass
+	
+	def __init__(self):
+		pass
+		
+	def create_file(self,file_path):
+		self.workbook = xlsxwriter.Workbook(file_path)
+		pass
+		
+	def close(self):
+		self.workbook.close();
+
+	def append_slave_initCmd(self,slave, sheet_name):
+		if self.workbook!= None:
+			worksheet = self.workbook.get_worksheet_by_name(sheet_name)
+			if worksheet is None:
+				worksheet = self.workbook.add_worksheet(sheet_name)
+				
+			#write header
+			worksheet.write(0,0,'Ado')
+			worksheet.write(0,1,'Adp')
+			worksheet.write(0,2,'Cmd')
+			worksheet.write(0,3,'Transitions')
+			worksheet.write(0,4,'Data')
+			worksheet.write(0,5,'Cnt')
+			worksheet.write(0,6,'Comment')
+			
+			row =1
+			#loop the initCmds
+			for i in slave.InitCmds:
+				worksheet.write(row,0,('0x%x' %(i.Ado)))
+				worksheet.write(row,1,('0x%x' %(i.Adp)))
+				worksheet.write(row,2,i.Cmd)
+				worksheet.write(row,3,list_to_comma_separated(i.Transition))
+				worksheet.write(row,4,i.Data)
+				worksheet.write(row,5,i.Cnt)
+				worksheet.write(row,6,i.Comment)
+				row+=1
+				
+			worksheet.autofilter('A1:G60')
+		else:
+			print ('workbook not  created')
+		pass
+
+
 if (__name__=='__main__'):
 	print(get_rand_pass())
 	#Main()
