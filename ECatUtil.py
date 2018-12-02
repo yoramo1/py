@@ -2,9 +2,16 @@ import sys
 import os
 import YoUtil
 import ECatConfigUtil
+from ECatEsiUtil import EsiUtil as esi
 from YoUtil import ecat_excel_util as excel
 from YoUtil import print_util as pr
 import click
+
+#---------------------------------
+#click site: https://github.com/pallets/click
+#            https://click.palletsprojects.com/en/latest/
+#tutorial -  https://dbader.org/blog/mastering-click-advanced-python-command-line-apps
+#---------------------------------
 
 
 @click.group()
@@ -17,6 +24,7 @@ def cli():
 def config(cfg_file,excel):
 	'''  dispay a full config '''
 	if os.path.isfile(cfg_file):
+		pr1 = pr()
 		cfg = ECatConfigUtil.Config(cfg_file)
 		cfg.load_config()
 		master = cfg.get_master();
@@ -26,7 +34,7 @@ def config(cfg_file,excel):
 			str += master.tostring(1)
 		for s in slave_list:
 			str += s.tostring(1)
-		pr.print(str)
+		pr1.print(str)
 		if excel != None:
 			generate_excel(cfg, excel)
 	else:
@@ -36,10 +44,11 @@ def config(cfg_file,excel):
 @click.argument('cfg_file',  type=click.Path())
 def slave_names(cfg_file):
 	if os.path.isfile(cfg_file):
+		pr1 = pr()
 		cfg = ECatConfigUtil.Config(cfg_file)
 		cfg.load_config()
 		slave_list = cfg.get_slaves_names()
-		pr.print(slave_list)
+		pr1.print(slave_list)
 	pass
 
 def generate_excel(cfg,excel_file):
@@ -55,6 +64,16 @@ def generate_excel(cfg,excel_file):
 		num+=1
 	xlsx.close()
 
+@click.command()
+@click.option('-vendor',  type=str)
+@click.option('-product',  type=str)
+def find_esi(vendor,product):
+	pr1= pr()
+	pr1.print('vendor=%s'% vendor)
+	pr1.print('product=%s'% product)
+	pr1.print('NOT IMPLEMENTED')
+	pass
+	
 #can be deprecated
 def Main():
 	print("ECatUtil -> ")
@@ -149,6 +168,7 @@ def cmd_slave_name_in_cfg():
 
 cli.add_command(config)
 cli.add_command(slave_names)
+cli.add_command(find_esi)
 
 		
 if (__name__=='__main__'):

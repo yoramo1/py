@@ -234,7 +234,7 @@ class print_util:
 	def __init__(self):
 		pass
 		
-	def print(msg, fg='black', bg='wite'):
+	def print(self, msg, fg='black', bg='wite'):
 		print(msg)
 	
 	
