@@ -228,7 +228,16 @@ class ecat_excel_util:
 			print ('workbook not  created')
 		pass
 
-
+class print_util:
+	pass
+	
+	def __init__(self):
+		pass
+		
+	def print(msg, fg='black', bg='wite'):
+		print(msg)
+	
+	
 if (__name__=='__main__'):
 	print(get_rand_pass())
 	#Main()
