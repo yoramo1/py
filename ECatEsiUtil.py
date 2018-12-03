@@ -75,16 +75,6 @@ class EsiUtil:
 	def __init__(self):
 		pass
 	
-	def get_ESI_files(self):
-		esi_folders = self.get_ESI_folders()
-		ret = list()
-		for pair in esi_folders:
-			folder = pair[1]
-			files = YoUtil.get_list_of_files(folder,'.xml')
-			for file in files:
-				full_path = os.path.join(folder,file)
-				ret.append((pair[0],full_path))
-		return ret
 
 	def get_ESI_files_by_vendor(self, vendor_id):
 		files = self.get_ESI_files()
@@ -100,6 +90,38 @@ class EsiUtil:
 						id = YoUtil.get_int(xml_id.text)
 						if id == vendor_id:
 							ret.append(file_path)
+		return ret
+		
+		
+	def get_ESI_files(self, vendor_id=None, productCode=None):
+		esi_folders = self.get_ESI_folders()
+		esi_files = list()
+		for pair in esi_folders:
+			folder = pair[1]
+			files = YoUtil.get_list_of_files(folder,'.xml')
+			for file in files:
+				full_path = os.path.join(folder,file)
+				esi_files.append((pair[0],full_path))
+
+		if vendor_id==None and productCode==None:
+			return esi_files
+			
+		ret = list()
+		for pair in esi_files:
+			file_path = pair[1]
+			esi_file = EsiFile(file_path)
+			if esi_file != None:
+				esi_file.load_vendor()
+				if esi_file.id == vendor_id:
+					if productCode == None:
+						ret.append((pair[0],esi_file.path))
+					else:
+						esi_file.load_devices()
+						for d in esi_file.devices:
+							if d != None:
+								if d.product_code == productCode:
+									ret.append((pair[0],file_path))
+									break
 		return ret
 	
 	def get_ESI_folders(self):
@@ -141,6 +163,7 @@ class EsiUtil:
 				self.con.close()
 		
 	def get_ESI_info(self,esi_path):
+		esi = EsiFile(esi_path)
 		vendor_id = 0
 		vendor_name  = None
 		self.esi_path = esi_path
@@ -207,6 +230,76 @@ class EsiUtil:
 		self.tree.parse(esi_path)
 		return self.tree.getroot()
 		
+class EsiFile:
+	pass
+		
+	def __init__(self, esi_path):
+		self.tree = ET()
+		self.path = esi_path
+		self.tree.parse(esi_path)
+		self.id=None
+		self.devices = list()
+		
+		
+	def load_vendor(self):
+		xml_esi = self.tree.getroot()
+		if xml_esi!= None:
+			xml_vendor = xml_esi.find('Vendor')
+			if xml_vendor!= None:
+				xml_id = xml_vendor.find('Id')
+				if xml_id != None:
+					self.id = YoUtil.get_int(xml_id.text)
+				else:
+					self.id=None
+				xml_name = xml_vendor.find('Name')
+				if xml_name != None:
+					self.vendor_name = xml_name.text
+
+		
+	def load_devices(self):
+		xml_list_device = self.tree.findall('Descriptions/Devices/Device')
+		#YoUtil.debug_print('num of devices in esi=',len(xml_list_device))
+		for xml_device in xml_list_device:
+			device = EsiDevice(xml_device)
+			self.devices.append(device)
+			'''
+			pc = None
+			rev=None
+			name=None
+			xml_type = xml_device.find('Type')
+			if xml_type != None:
+				msg1 = ''
+				if 'ProductCode' in xml_type.attrib.keys():
+					pc = YoUtil.get_int(xml_type.attrib['ProductCode'])
+					msg1 = msg1+'ProductCode='+hex(pc)
+				if 'RevisionNo' in xml_type.attrib.keys():
+					rev = YoUtil.get_int(xml_type.attrib['RevisionNo'])
+					msg1= msg1+' RevisionNo:'+hex(rev)
+					
+				if len(msg1)>0:
+					YoUtil.debug_print(msg1,'')
+				if pc != None:
+					ret.append((pc,rev,name))
+			'''
+
+		pass
+		
+class EsiDevice:
+	pass 
+	
+	def __init__(self, xml_device):
+		self.xml_node = xml_device
+		self.product_code = None
+		self.revision = None
+		xml_type = xml_device.find('Type')
+		if xml_type!= None:
+			if 'ProductCode' in xml_type.attrib.keys():
+				self.product_code  = YoUtil.get_int(xml_type.attrib['ProductCode'])
+			if 'RevisionNo' in xml_type.attrib.keys():
+				self.revision = YoUtil.get_int(xml_type.attrib['RevisionNo'])
+			
+		
+	
 	
 	
 if (__name__=='__main__'):

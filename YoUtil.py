@@ -110,7 +110,7 @@ def get_xml_content(tag):
 	
 def get_int(str):
 	ret = None
-	if str.startswith('#x'):
+	if str.startswith('#x') or str.startswith('0x'):
 		str = str.replace('#x','0x')
 		ret = int(str,16)
 		return ret

@@ -2,7 +2,7 @@ import sys
 import os
 import YoUtil
 import ECatConfigUtil
-from ECatEsiUtil import EsiUtil as esi
+from ECatEsiUtil import EsiUtil as EsiUtil
 from YoUtil import ecat_excel_util as excel
 from YoUtil import print_util as pr
 import click
@@ -65,14 +65,22 @@ def generate_excel(cfg,excel_file):
 	xlsx.close()
 
 @click.command()
-@click.option('-vendor',  type=str)
-@click.option('-product',  type=str)
+@click.option('-vendor',  type=str, default=None)
+@click.option('-product',  type=str, default=None)
 def find_esi(vendor,product):
+	'''
+		finds ESI files can fileter by [vendor] and [product]
+	'''
 	pr1= pr()
-	pr1.print('vendor=%s'% vendor)
-	pr1.print('product=%s'% product)
-	pr1.print('NOT IMPLEMENTED')
-	pass
+	esi = EsiUtil()
+	vendor_id = None
+	productCode=None
+	if vendor!=None:
+		vendor_id = YoUtil.get_int(vendor)
+	if product!= None:
+		productCode = YoUtil.get_int(product)
+	files = esi.get_ESI_files(vendor_id,productCode)
+	YoUtil.print_list(files,1)
 	
 #can be deprecated
 def Main():
@@ -166,6 +174,7 @@ def cmd_slave_name_in_cfg():
 		print_usage()
 	
 
+#Add Commands
 cli.add_command(config)
 cli.add_command(slave_names)
 cli.add_command(find_esi)
