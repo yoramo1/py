@@ -3,6 +3,7 @@ import os
 import YoUtil
 import ECatConfigUtil
 from ECatEsiUtil import EsiUtil as EsiUtil
+from ECatEsiUtil import EsiFile as EsiFile
 from YoUtil import ecat_excel_util as excel
 from YoUtil import print_util as pr
 import click
@@ -80,8 +81,29 @@ def find_esi(vendor,product):
 	if product!= None:
 		productCode = YoUtil.get_int(product)
 	files = esi.get_ESI_files(vendor_id,productCode)
-	YoUtil.print_list(files,1)
+	if files != None and len(files)>0:
+		YoUtil.print_list(files,1)
+	else:
+		pr1.print('ESI not found !')
 	
+@click.command()
+@click.argument('esi_path',  type=click.Path())
+def esi_devices(esi_path):
+	'''
+	dispay the devices in a ESI file
+	'''
+	pr1= pr()
+	esi_file = EsiFile(esi_path)
+	if esi_file != None:
+		esi_file.load_devices()
+		for d in esi_file.devices:
+			pr1.print('(0x%x,0x%x) - %s' % (d.product_code, d.revision, d.name))
+		pass
+	else:
+		pr1.print('Error loading ESI file')
+	pass
+	
+'''
 #can be deprecated
 def Main():
 	print("ECatUtil -> ")
@@ -173,11 +195,12 @@ def cmd_slave_name_in_cfg():
 	else:
 		print_usage()
 	
-
+'''
 #Add Commands
 cli.add_command(config)
 cli.add_command(slave_names)
 cli.add_command(find_esi)
+cli.add_command(esi_devices)
 
 		
 if (__name__=='__main__'):

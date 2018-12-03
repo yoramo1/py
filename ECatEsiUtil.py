@@ -291,12 +291,17 @@ class EsiDevice:
 		self.xml_node = xml_device
 		self.product_code = None
 		self.revision = None
+		self.name = None
+		
 		xml_type = xml_device.find('Type')
 		if xml_type!= None:
 			if 'ProductCode' in xml_type.attrib.keys():
 				self.product_code  = YoUtil.get_int(xml_type.attrib['ProductCode'])
 			if 'RevisionNo' in xml_type.attrib.keys():
 				self.revision = YoUtil.get_int(xml_type.attrib['RevisionNo'])
+		xml_name = xml_device.find('Name')
+		if xml_name!=None:
+			self.name = xml_name.text
 			
 		
 	
